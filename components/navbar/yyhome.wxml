@@ -1,0 +1,19 @@
+<!--components/navbar/yyhome.wxml-->
+<view class='nav-wrap' style='padding: {{barHeightrpx}}rpx 0 15rpx 0;'>
+  <!-- // 导航栏 左上角的返回按钮 和home按钮 // 其中wx:if='{{navbarData.showCapsule}}' 是控制左上角按钮的显示隐藏，首页不显示 -->
+  <view class='nav-capsule' style='width:{{lWidth}}px;'>
+    <!-- //左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示 //从分享进入小程序时 返回上一级按钮不应该存在 -->
+    <view class='back-box' bindtap='_navback'>
+      <view class='iconfont icon-back'></view>
+    </view>
+  </view>
+  <!-- 我的音园顶部标题切换区 -->
+  <view class="title-box" style="top: {{barHeightrpx}}rpx">
+    <view class="title-yy {{0==navbarData.navidx?'active':''}}" bindtap="switchnav" data-t="0">
+      <text>音园</text>
+    </view>
+    <view class="title-my {{1==navbarData.navidx?'active':''}}" bindtap="switchnav" data-t="1">
+      <text>我的</text>
+    </view>
+  </view>
+</view>

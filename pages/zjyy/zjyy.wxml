@@ -1,0 +1,57 @@
+<!-- pages/zjyy/zjyy.wxml -->
+<!-- 引入自定义组件。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<!-- 背景图 -->
+<image class='bottombg' src='http://yinyuan.ifree258.top/bghd.jpg'></image>
+<view class='con' style='margin-top: {{topHeight}}px; height: {{bHeight}}px'>
+    <view wx:if="{{!hasRec}}">
+      <image class='bottombg' src='http://yinyuan.ifree258.top/norecbg.png'></image>
+    </view>
+      
+    <!-- 轮播区 -->
+    <swiper wx:else class="banner-swiper" previous-margin="60rpx" next-margin="60rpx" easing-function="easeInOutCubic" bindchange="applyMediaSwiper">
+        <!-- 单个轮播 -->
+        <swiper-item class="swiper-item" wx:for="{{recinfoLists}}" wx:key="{{item.id}}">
+            <!-- 整体框 -->
+            <view class="item-box {{item.state==1?'current':''}}" animation="{{item.state==1?magnifyMedia:shrinkMedia}}">
+                <!-- 头像-昵称区 -->
+                <view class="ava-nick-box">
+                    <!-- 头像区 -->
+                    <image class="ava-img" src="{{item.user.wxAvatarUrl}}"></image>
+                    <view class="ava-box">
+                        <!-- 性别图标 -->
+                        <view class="gender-box iconfont {{item.user.wxGender==1?'icon-male':'icon-female'}}"></view>
+                    </view>
+                    <!-- 昵称 -->
+                    <text class="nickname">{{item.user.wxNickName}}</text>
+                </view>
+                <!-- 推荐歌曲区 -->
+                <view class="recsong-box">
+                    <text class="txt-rec">{{item.user.wxGender==1?'他':'她'}}最近最爱的歌曲</text>
+                    <block wx:for="{{item.songList}}" wx:key="{{index}}">
+                        <view class='list'>
+                            <view class="cover-box">
+                                <image src="{{item.cover}}"></image>
+                            </view>
+                            <view class="songinfo-box">
+                                <view class="name-box">
+                                    <view class="txt-name" data-songid='{{item.id}}' bindtap='toSongById'>
+                                        {{item.name}}
+                                    </view>
+                                    <!-- 如果当前歌曲播放 对应歌曲显示暂停按钮 -->
+                                    <block wx:if="{{item.id===curplay && playing}}">
+                                        <view class="iconfont icon-paus" data-songid='{{item.id}}' data-p="{{playing}}" bindtap="playingtoggle"></view>
+                                    </block>
+                                    <block wx:else>
+                                        <view class="iconfont icon-play" data-songid='{{item.id}}' data-p="{{playing}}" bindtap="playingtoggle"></view>
+                                    </block>
+                                </view>
+                                <text style="font-size:24rpx">{{item.author}}</text>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+</view>

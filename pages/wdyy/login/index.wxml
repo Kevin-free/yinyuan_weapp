@@ -1,0 +1,55 @@
+<<<<<<< HEAD
+<view class="form-common">
+    <text class='txt'>推荐绑定网易云音乐账号，可获取专属推荐</text>
+    <form bindsubmit="login">
+        <view class="formc-cnt">
+            <text>账号：</text>
+            <input bindinput="textinput" data-type="1" placeholder="手机" type="text"/>
+        </view>
+        <view class="formc-cnt">
+            <text>密码：</text>
+            <input bindinput="textinput" data-type="2" type="text" password="true"/>
+        </view>
+        <view>
+            <button type="primary" hover-class="btnhover" formType="submit">绑定</button>
+        </view>
+    </form>
+</view>
+=======
+<<<<<<< HEAD
+<view class="form-common">
+    <text class='txt'>推荐绑定网易云音乐账号，可获取专属推荐</text>
+    <form bindsubmit="login">
+        <view class="formc-cnt">
+            <text>账号：</text>
+            <input bindinput="textinput" data-type="1" placeholder="手机" type="text"/>
+        </view>
+        <view class="formc-cnt">
+            <text>密码：</text>
+            <input bindinput="textinput" data-type="2" type="text" password="true"/>
+        </view>
+        <view>
+            <button type="primary" hover-class="btnhover" formType="submit">绑定</button>
+        </view>
+    </form>
+</view>
+=======
+<view class="form-common">
+    <text class='txt'>推荐绑定网易云音乐账号，可获取专属推荐</text>
+    <form bindsubmit="login">
+        <view class="formc-cnt">
+            <text>账号：</text>
+            <input bindinput="textinput" data-type="1" placeholder="手机" type="text"/>
+        </view>
+        <view class="formc-cnt">
+            <text>密码：</text>
+            <input bindinput="textinput" data-type="2" type="text" password="true"/>
+        </view>
+        <view>
+            <button type="primary" hover-class="btnhover" formType="submit">绑定</button>
+        </view>
+    </form>
+</view>
+>>>>>>> renew
+>>>>>>> 2019/12/9
+<view class='skip' bindtap='skipLogin'>跳过>></view>

@@ -1,0 +1,116 @@
+<!--pages/home/home.wxml 主界面 -->
+
+<!-- 引入自定义组件。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<!-- 整体contain -->
+<view class='con' style='height: {{winHeight}}px'>
+  <!-- 顶部头像区 -->
+  <view class='top-box'>
+    <image src='http://yinyuan.ifree258.top/topbg750.png'></image>
+    <!-- 信息区 -->
+    <view class='info-box'>
+      <view class='avatar-box'>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+      </view>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <view class='icon-box'>
+        <view class='yg-box'>
+          <!-- <image class='yg-img' src='/assets/images/music.png'></image> -->
+          <view class='iconfont icon-yingan'></view>
+          <text class='yg-txt' style='margin-left:5rpx'>{{totalYG}}</text>
+        </view>
+        <view class='yg-box'>
+          <!-- <image class='yg-img' src='/assets/images/music.png'></image> -->
+          <view class='iconfont icon-yinfu'></view>
+          <text class='yg-txt' style='margin-left:10rpx'>{{zyyzs}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 下部功能区 -->
+  <view class='bottom-box'>
+    <!-- 左边 -->
+    <view class='left-box'>
+      <view class='item' style="height:25vh; margin-top: 0rpx;" bindtap='xzyy'>
+        <!-- 寻找音缘 -->
+        <image src='http://yinyuan.ifree258.top/xzyyori.png' mode='scaleToFill'></image>
+      </view>
+      <view class='item' style="height:16vh; margin-top: 30rpx;" bindtap='zjyy'>
+        <!-- 最佳音缘 -->
+        <image src='http://yinyuan.ifree258.top/zjyyori.png' mode='scaleToFill'></image>
+      </view>
+      <view class='item' style="height:13vh; margin-top: 30rpx;" bindtap='ygyq'>
+        <!-- 音感源泉 -->
+        <view class='countDown'>
+          <text class='count-txt'>{{countDownHour}}:{{countDownMinute}}:{{countDownSecond}}</text>
+        </view>
+        <image src='http://yinyuan.ifree258.top/ygyqori.png' mode='scaleToFill'></image>
+        <view class="drop" bindtap='gainYG'>
+          <view class="drop-txt">{{gainYG}}/60</view>
+          <view class="{{dropping? 'dropping':''}}"></view>
+          <image class='drop-bg' src='http://yinyuan.ifree258.top/bottle2.png'></image>
+          <view class="drop-after" style="height:{{waterHeight}}rpx"></view>
+        </view>
+      </view>
+    </view>
+    <!-- 右边 -->
+    <view class='right-box'>
+      <view class='item' style="height:22vh; margin-top: 0rpx;" bindtap='wdyy'>
+        <!-- 我的音园 -->
+        <image src='http://yinyuan.ifree258.top/wdyyori.png' mode='scaleToFill'></image>
+      </view>
+      <view class='item' style="height:22vh; margin-top: 30rpx;" bindtap='phb'>
+        <!-- 排行榜 -->
+        <image src='http://yinyuan.ifree258.top/phbori.png' mode='scaleToFill'></image>
+      </view>
+      <view class='item' style="height:10vh; margin-top: 30rpx;" bindtap='sz'>
+        <!-- 设置 -->
+        <image src='http://yinyuan.ifree258.top/szori.png' mode='scaleToFill'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 模态框 -->
+<view class="modal-mask" bindtap="hideModal" wx:if="{{showModal}}"></view>
+<!-- 音感模态框 -->
+<view wx:if="{{showModalYG}}">
+  <view class='modal-photo'>
+    <image class="top-img" src="/assets/images/sd2.png" mode="cover"></image>
+  </view>
+  <view class="modal-content">
+    <view class='modal-title'>
+      <text class='modal-title-txt'>获取更多音感</text>
+    </view>
+    <view class='item-box'>
+      <text>寻找音缘匹配获取</text>
+      <view class='item-box-button' bindtap='xzyy'>
+        <text>前往</text>
+      </view>
+    </view>
+    <view class='item-box'>
+      <text>我的音园听歌获取</text>
+      <view class='item-box-button' bindtap='wdyy'>
+        <text>前往</text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 设置模态框 -->
+<view wx:if="{{showModalSZ}}">
+  <view class='modal-photo-sz'>
+    <image class="top-img" src="/assets/images/sz2.png" mode="cover"></image>
+  </view>
+  <view class="modal-content-sz">
+    <view class='modal-title-sz'>
+      <text class='modal-title-txt'>设置</text>
+    </view>
+    <view class='item-box-sz'>
+      <button class='btn-sq' open-type="openSetting" bindopensetting="onTapClearAuthorized">授权</button>
+    </view>
+    <view class='item-box-sz'>
+      <button class='btn-sq' bindtap='onTapClearStorage'>清除缓存</button>
+    </view>
+  </view>
+</view>

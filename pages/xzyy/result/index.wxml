@@ -1,0 +1,26 @@
+<!--pages/xzyy/result/index.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<!-- <image class='bottombg' src='http://yinyuan.ifree258.top/bg.jpg'></image> -->
+<image class='bottombg' src="http://yinyuan.ifree258.top/bghd.jpg"></image>
+<view class='con'>
+  <view class='ava-box'>
+    <view class='my-info'>
+      <image class='ava-img' src="{{userInfo.avatarUrl}}"></image>
+      <text class='nickname-txt'>{{userInfo.nickName}}</text>
+    </view>
+    <view class='partern-info'>
+      <image class='ava-img' src="{{hostInfo.avatarUrl}}"></image>
+      <text class='nickname-txt'>{{hostInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class='yyjs'>
+    <text style="font-size:34rpx;">音缘阶数</text>
+    <text class='js'>{{zs}}阶</text>
+  </view>
+  <view class='rand-txt'>
+    <text>{{randTxt}}</text>
+  </view>
+  <view class='share-area'>
+    <button class='btn-share' open-type='share'>分享后查看详情</button>
+  </view>
+</view>

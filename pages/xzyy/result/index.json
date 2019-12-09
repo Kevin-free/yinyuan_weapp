@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/navbar/titlebar"
+  },
+  "navigationBarTitleText": "匹配结果",
+  "navigationStyle": "custom"
+}

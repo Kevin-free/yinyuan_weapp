@@ -1,0 +1,438 @@
+<<<<<<< HEAD
+/* components/navbar/titlebar.wxss */
+/* 组件中不会自动引用公共样式，如果需要则需在样式文件中引入 */
+/* @import "../../app.wxss"; */
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back:before {
+  content: "\e637";
+}
+.icon-wenhao:before {
+  content: "\e71d";
+  color: #fff;
+  margin-left: 20rpx;
+}
+
+/* 顶部要固定定位   标题要居中   自定义按钮和标题要和右边微信原生的胶囊上下对齐 */
+.nav-wrap {
+  /* outline: 1px solid blue; */
+  /* background-image: linear-gradient(-225deg, #ECA1FE 0%, #B19FFF 48%, #5271C4 100%); */
+  position: fixed;
+  /* width: 318px; */
+  width: 100%;
+  height: 32px;
+  /* padding: 7px 0; */
+  padding: 15rpx 0;
+  /* padding-bottom: 15rpx 0; */
+  top: 0;
+  /* background: #fff; *//* background-color: rgba(255, 255, 255, 0.1); *//* color: #fff; */
+  z-index: 8;
+  /* padding-bottom: 10rpx; *//* background-position: top;
+  background-size: cover; *//* padding-bottom: 10px; *//* filter: blur(20px) brightness(0.6);
+  background-repeat: no-repeat;
+  transform: scale(1.2); */
+}
+
+/* 标题要居中 */
+
+.nav-title {
+  /* outline: 1px solid red; */
+  position: absolute;
+  text-align: center;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 36rpx;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-capsule {
+  /* outline: 1px solid green; */
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+  /* padding-left: 30rpx; */
+  width: 570rpx;
+  justify-content: space-between;
+  height: 32px;
+}
+
+.navbar-v-line {
+  width: 1px;
+  height: 32rpx;
+  background-color: #e5e5e5;
+}
+
+.back-box {
+  /* outline: 1px solid red; */
+  /* width: 64rpx;
+  height: 64rpx; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 30rpx; */
+  /* padding-right: 30rpx; */
+}
+
+.back-box .iconfont {
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.back-pre, .back-home {
+  width: 50rpx;
+  height: 50rpx;
+  /* width: 100%;
+  height: 100%; *//* margin-top: 4rpx; *//* padding: 10rpx; */
+}
+
+.nav-capsule .back-home {
+  width: 36rpx;
+  height: 40rpx;
+  margin-top: 3rpx;
+}
+
+.song_box {
+  /* outline: 1px solid blue; */
+  width: 100%;
+  height: 32px;
+  padding: 15rpx 0;
+  padding-left:10rpx;
+  /* height: 80rpx; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* padding-bottom: 10rpx; */
+  /* margin-left: 30rpx; */
+  /* margin: 20rpx 0; */
+}
+
+.title-txt{
+  color: #fff;
+  font-size: 36rpx;
+}
+
+.name_txt {
+  /* outline: 1px solid blue; */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  margin-bottom: 15rpx;
+}
+
+.author_txt {
+  /* outline: 1px solid blue; */
+  color: #c9c9c9;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  margin-bottom: 5rpx;
+}
+=======
+<<<<<<< HEAD
+/* components/navbar/titlebar.wxss */
+/* 组件中不会自动引用公共样式，如果需要则需在样式文件中引入 */
+/* @import "../../app.wxss"; */
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back:before {
+  content: "\e637";
+}
+.icon-wenhao:before {
+  content: "\e71d";
+  color: #fff;
+  margin-left: 20rpx;
+}
+
+/* 顶部要固定定位   标题要居中   自定义按钮和标题要和右边微信原生的胶囊上下对齐 */
+.nav-wrap {
+  /* outline: 1px solid blue; */
+  /* background-image: linear-gradient(-225deg, #ECA1FE 0%, #B19FFF 48%, #5271C4 100%); */
+  position: fixed;
+  /* width: 318px; */
+  width: 100%;
+  height: 32px;
+  /* padding: 7px 0; */
+  padding: 15rpx 0;
+  /* padding-bottom: 15rpx 0; */
+  top: 0;
+  /* background: #fff; *//* background-color: rgba(255, 255, 255, 0.1); *//* color: #fff; */
+  z-index: 8;
+  /* padding-bottom: 10rpx; *//* background-position: top;
+  background-size: cover; *//* padding-bottom: 10px; *//* filter: blur(20px) brightness(0.6);
+  background-repeat: no-repeat;
+  transform: scale(1.2); */
+}
+
+/* 标题要居中 */
+
+.nav-title {
+  /* outline: 1px solid red; */
+  position: absolute;
+  text-align: center;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 36rpx;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-capsule {
+  /* outline: 1px solid green; */
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+  /* padding-left: 30rpx; */
+  width: 570rpx;
+  justify-content: space-between;
+  height: 32px;
+}
+
+.navbar-v-line {
+  width: 1px;
+  height: 32rpx;
+  background-color: #e5e5e5;
+}
+
+.back-box {
+  /* outline: 1px solid red; */
+  /* width: 64rpx;
+  height: 64rpx; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 30rpx; */
+  /* padding-right: 30rpx; */
+}
+
+.back-box .iconfont {
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.back-pre, .back-home {
+  width: 50rpx;
+  height: 50rpx;
+  /* width: 100%;
+  height: 100%; *//* margin-top: 4rpx; *//* padding: 10rpx; */
+}
+
+.nav-capsule .back-home {
+  width: 36rpx;
+  height: 40rpx;
+  margin-top: 3rpx;
+}
+
+.song_box {
+  /* outline: 1px solid blue; */
+  width: 100%;
+  height: 32px;
+  padding: 15rpx 0;
+  padding-left:10rpx;
+  /* height: 80rpx; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* padding-bottom: 10rpx; */
+  /* margin-left: 30rpx; */
+  /* margin: 20rpx 0; */
+}
+
+.title-txt{
+  color: #fff;
+  font-size: 36rpx;
+}
+
+.name_txt {
+  /* outline: 1px solid blue; */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  margin-bottom: 15rpx;
+}
+
+.author_txt {
+  /* outline: 1px solid blue; */
+  color: #c9c9c9;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  margin-bottom: 5rpx;
+}
+=======
+/* components/navbar/titlebar.wxss */
+/* 组件中不会自动引用公共样式，如果需要则需在样式文件中引入 */
+/* @import "../../app.wxss"; */
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back:before {
+  content: "\e637";
+}
+.icon-wenhao:before {
+  content: "\e71d";
+  color: #fff;
+  margin-left: 20rpx;
+}
+
+/* 顶部要固定定位   标题要居中   自定义按钮和标题要和右边微信原生的胶囊上下对齐 */
+.nav-wrap {
+  /* outline: 1px solid blue; */
+  /* background-image: linear-gradient(-225deg, #ECA1FE 0%, #B19FFF 48%, #5271C4 100%); */
+  position: fixed;
+  /* width: 318px; */
+  width: 100%;
+  height: 32px;
+  /* padding: 7px 0; */
+  padding: 15rpx 0;
+  /* padding-bottom: 15rpx 0; */
+  top: 0;
+  /* background: #fff; *//* background-color: rgba(255, 255, 255, 0.1); *//* color: #fff; */
+  z-index: 8;
+  /* padding-bottom: 10rpx; *//* background-position: top;
+  background-size: cover; *//* padding-bottom: 10px; *//* filter: blur(20px) brightness(0.6);
+  background-repeat: no-repeat;
+  transform: scale(1.2); */
+}
+
+/* 标题要居中 */
+
+.nav-title {
+  /* outline: 1px solid red; */
+  position: absolute;
+  text-align: center;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 36rpx;
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-capsule {
+  /* outline: 1px solid green; */
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+  /* padding-left: 30rpx; */
+  width: 570rpx;
+  justify-content: space-between;
+  height: 32px;
+}
+
+.navbar-v-line {
+  width: 1px;
+  height: 32rpx;
+  background-color: #e5e5e5;
+}
+
+.back-box {
+  /* outline: 1px solid red; */
+  /* width: 64rpx;
+  height: 64rpx; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 30rpx; */
+  /* padding-right: 30rpx; */
+}
+
+.back-box .iconfont {
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.back-pre, .back-home {
+  width: 50rpx;
+  height: 50rpx;
+  /* width: 100%;
+  height: 100%; *//* margin-top: 4rpx; *//* padding: 10rpx; */
+}
+
+.nav-capsule .back-home {
+  width: 36rpx;
+  height: 40rpx;
+  margin-top: 3rpx;
+}
+
+.song_box {
+  /* outline: 1px solid blue; */
+  width: 100%;
+  height: 32px;
+  padding: 15rpx 0;
+  padding-left:10rpx;
+  /* height: 80rpx; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* padding-bottom: 10rpx; */
+  /* margin-left: 30rpx; */
+  /* margin: 20rpx 0; */
+}
+
+.title-txt{
+  color: #fff;
+  font-size: 36rpx;
+}
+
+.name_txt {
+  /* outline: 1px solid blue; */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  margin-bottom: 15rpx;
+}
+
+.author_txt {
+  /* outline: 1px solid blue; */
+  color: #c9c9c9;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  margin-bottom: 5rpx;
+}
+>>>>>>> renew
+>>>>>>> 2019/12/9

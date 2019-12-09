@@ -1,0 +1,71 @@
+<!--pages/wdyy/playing/playing.wxml 音乐播放界面 -->
+<!-- 引入自定义组件。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<!-- <nav-bar navbar-data='{{nvabarData}}'></nav-bar> -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<!-- 模糊背景 -->
+<view class="blurbg" style="background-image: url({{nvabarData.cover}})"></view>
+
+<!-- <view class='con'> -->
+<view class='con' style='margin-top: {{topHeight}}px; height: {{bHeight}}px'>
+  <!--分割线-->
+  <view style='border:0; height: 1px;background: linear-gradient( to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, rgba(99,99,99,0.3) 20%, rgba(122,122,122,0.5) 50%, rgba(99,99,99,0.3) 80%, rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%);'></view>
+  <!-- 唱针部分 -->
+  <image class="{{voice.playing?'czplaying':'cz'}}" src='/assets/images/cz.png' mode='aspectFit'></image>
+
+  <!-- 黑胶唱片部分 -->
+  <view id='cd-box' class="{{voice.playing?'playing ':' '}}">
+    <view class="level_1">
+      <!-- <image class='cd' src='/assets/images/cd.png'> -->
+      <image class='cd' src='http://yinyuan.ifree258.top/cd.png'></image>
+      <image class='cover' src="{{nvabarData.cover}}"></image>
+    </view>
+  </view>
+
+  <!-- TODO 下载、分享、更多功能区 -->
+  <view class='op-box'>
+    <view class='download-box' bindtap='playClick'>
+      <image src="/assets/images/share.png" class='img-download' style='width:40%; height:40%;'></image>
+    </view>
+    <view class='download-box' bindtap='playClick'>
+      <image src="/assets/images/download.png" class='img-download' ></image>
+    </view>
+    <view class='download-box' bindtap='playClick'>
+      <image src="/assets/images/more2.png" class='img-download' style='width:70%; height:70%;'></image>
+    </view>
+  </view>
+
+  <!-- 可拖动控制进度条 -->
+  <view class='move-jdt'>
+    <text class='time' space='ensp'>{{voice.time.min}}:{{voice.time.sec}}</text>
+    <movable-area bindtap='voiceSeekTap' class="movable-area" id="movable-area">
+      <movable-view disabled='{{!voice.canPlay}}' bindchange="voiceSeekMove" bindtouchend='seekTouchEnd' direction="horizontal" class='movable-view' style="opacity:{{voice.canPlay?'1':'0'}}" id="movable-view" x="{{voice.margin}}" damping="1000">
+        <!-- <text style='font-size:20rpx;font-family:NotoSansHans-Regular;font-weight:400;color:rgba(255,255,255,1);line-height:30rpx;'>{{voice.time.min}}:{{voice.time.sec}}</text> -->
+        <text style='font-size:20rpx;font-family:NotoSansHans-Regular;font-weight:400;color:rgba(255,255,255,1);line-height:30rpx;'></text>
+      </movable-view>
+    </movable-area>
+    <progress stroke-width='2' backgroundColor='#fff' activeColor='#2193EE' percent='{{voice.progress}}'></progress>
+    <text class='time' space='ensp' style="color:#aaa;">{{voice.duration.min}}:{{voice.duration.sec}}</text>
+  </view>
+
+
+  <!-- 播放控制按钮区 -->
+  <view class='control-box'>
+    <view class='mode-box' bindtap='playClick'>
+      <image src="/assets/images/a_p.png" class='img-mode' style='width:80%; height:80%;'></image>
+    </view>
+    <view class='pre-box' bindtap='playClick'>
+      <image src="/assets/images/pre.png" class='img-pre'></image>
+    </view>
+    <view class='play-box' bindtap='playClick'>
+      <image src="/assets/images/{{voice.playing?'ajd.png ':'ajf.png '}}" class='img-play'></image>
+    </view>
+    <view class='next-box' bindtap='playClick'>
+      <image src="/assets/images/next.png" class='img-next'></image>
+    </view>
+    <view class='list-box' bindtap='playClick'>
+      <image src="/assets/images/list.png" class='img-list' style='width:80%; height:80%;'></image>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,7 @@
+<import src="../../../utils/commentslist.wxml" />
+<template is="commentslist" data="{{rec:rec,loading:loading}}" />
+<!-- 发表评论区 -->
+<view class="comment-box">
+  <textarea fixed="true" auto-height="{{autoheight}}" style="height:{{height}}px" class="comment-area" type="text" name="name" bindinput="inputext" placeholder="说出你的故事吧"  value="{{value}}" bindlinechange="linechange"></textarea>
+  <text bindtap="sendComment">发送</text>
+</view>

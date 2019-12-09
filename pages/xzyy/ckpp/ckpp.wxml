@@ -1,0 +1,43 @@
+<!--pages/xzyy/ckpp/ckpp.wxml  查看匹配界面-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<!-- <image class='bottombg' src='http://yinyuan.ifree258.top/bg.jpg'></image> -->
+<image class='bottombg' src="http://yinyuan.ifree258.top/bghd.jpg"></image>
+<view class='con' style='margin-top: {{topHeight}}px; height: {{bHeight}}px'>
+  <!-- 标题栏 -->
+  <view class="tabTit">
+    <view class="flex1{{!tab[index]?' active':''}}" wx:for="{{tabTxt}}" wx:key="type" data-index="{{index}}" bindtap="">
+      <text class='column-item'>{{item}}</text>
+      <!-- <image class='img-arrow' src="/assets/images/sort.png"></image> -->
+    </view>
+  </view>
+
+  <!-- 信息显示区 -->
+  <scroll-view class="scr" scroll-y="true">
+    <block wx:for="{{infos}}" wx:key="" wx:for-index="index" wx:for-item="aaa">
+      <view class='table'>
+        <view class="tr" data-index='{{index}}' bindtap='toDetail' bindlongpress="deleteItem">
+          <view class='td-img'>
+            <image class='avatar' src='{{aaa.avatarUrl}}'></image>
+          </view>
+          <text class="td-1">{{aaa.nickName}}</text>
+          <!-- <text class="td-2">{{aaa.ppzs}}</text> -->
+          <view class='td-2'>
+            <view class="td-2-off">
+              <block wx:for="{{5}}" wx:key="" wx:for-index="index">
+                <image class='ppzs-img' src='/assets/images/ppzs_0.png'></image>
+                <!-- <image class='ppzs1-img' src='/assets/images/ppzs_1.png'></image> -->
+              </block>
+            </view>
+            <view class="td-2-on">
+              <block wx:for="{{aaa.ppzs}}" wx:key="" wx:for-index="index">
+                <!-- <image class='ppzs-img' src='/assets/images/ppzs_0.png'></image> -->
+                <image class='ppzs1-img' src='/assets/images/ppzs_1.png'></image>
+              </block>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+</view>

@@ -1,0 +1,29 @@
+<!--components/navbar/titlebar.wxml 标题型导航栏-->
+<!-- <view class='nav-wrap' style='margin-top: {{barHeight}}px; background-image:{{navbarData.bg}}'> -->
+<view class='nav-wrap' style='padding-top: {{barHeightrpx}}rpx; background-image:{{navbarData.bg}}'>
+  <!-- // 导航栏 左上角的返回按钮 和home按钮 // 其中wx:if='{{navbarData.showCapsule}}' 是控制左上角按钮的显示隐藏，首页不显示 -->
+  <view class='nav-capsule' style='width:{{lWidth}}px;' wx:if='{{navbarData.showCapsule}}'>
+    <!-- //左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示 //从分享进入小程序时 返回上一级按钮不应该存在 -->
+    <!-- <view class='back-box' bindtap='_navback' wx:if='{{!share}}'> -->
+    <view class='back-box' bindtap="{{navbarData.goHome?'goHome':navbarData.showTip?'showTip':'_navback'}}" wx:if='{{navbarData.showBack}}'>
+      <view class='iconfont icon-back'></view>
+    </view>
+    <!-- 音乐信息 -->
+    <view class='song_box'>
+      <text class='title-txt' bindtap="{{navbarData.goHome?'goHome':navbarData.showTip?'showTip':'_navback'}}">{{navbarData.title}}</text>
+      <!-- 问号提示 -->
+      <view class='homeTip' bindtap="showHomeTip" wx:if='{{navbarData.showWenhao}}'>
+        <view class='iconfont icon-wenhao'></view>
+      </view>
+      <!-- <text class='name_txt'>词不达意</text>
+      <text class='author_txt'>林忆莲</text> -->
+    </view>
+  </view>
+</view>
+
+<!-- 是否显示提示图片 -->
+<view wx:if="{{navbarData.showHomeTip}}">
+    <view>
+        <image bindtap="btn_img" src="{{tishi_img}}" style="width:{{windowWidth}}px;height:{{windowHeight}}px;position:fixed;top:0;z-index:999;"></image>
+    </view>
+</view>

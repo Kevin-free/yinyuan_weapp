@@ -1,0 +1,34 @@
+<<<<<<< HEAD
+<template name="playing">
+  <view id="page_playing_tmp" class="{{open?'ppt_open':''}}">
+  <navigator url="../{{t==1?'playing':(t==2?'fm':'radio')}}/index?id={{music.id}}">
+    <view>
+      {{music.name}}
+    </view>
+    <view><image src="../../../image/"></image></view>
+    </navigator>
+  </view>
+=======
+<<<<<<< HEAD
+<template name="playing">
+  <view id="page_playing_tmp" class="{{open?'ppt_open':''}}">
+  <navigator url="../{{t==1?'playing':(t==2?'fm':'radio')}}/index?id={{music.id}}">
+    <view>
+      {{music.name}}
+    </view>
+    <view><image src="../../../image/"></image></view>
+    </navigator>
+  </view>
+=======
+<template name="playing">
+  <view id="page_playing_tmp" class="{{open?'ppt_open':''}}">
+  <navigator url="../{{t==1?'playing':(t==2?'fm':'radio')}}/index?id={{music.id}}">
+    <view>
+      {{music.name}}
+    </view>
+    <view><image src="../../../image/"></image></view>
+    </navigator>
+  </view>
+>>>>>>> renew
+>>>>>>> 2019/12/9
+</template>

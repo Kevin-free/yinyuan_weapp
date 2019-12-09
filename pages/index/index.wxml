@@ -1,0 +1,8 @@
+<!--index.wxml 登录页 -->
+<view class='cont' style="width:{{winWidth}}px; height:{{winHeight}}px">
+  <image src="http://yinyuan.ifree258.top/indexGif.gif"></image>
+  <button wx:if="{{canIUse}}" class='btn-login' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+  <text class='login-txt'>开启寻找之旅</text>
+  </button>
+  <view wx:else>请升级微信版本</view>
+</view>

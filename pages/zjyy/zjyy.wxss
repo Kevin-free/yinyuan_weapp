@@ -1,0 +1,178 @@
+/* pages/zjyy/zjyy.wxss */
+
+page {
+    height: 0;
+}
+
+.con {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-swiper {
+    height: 1000rpx;
+    margin-top: 100rpx;
+}
+
+.swiper-item {
+    /* outline: 1px solid green; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(0%, 0px) translateZ(0px);
+    display: flex;
+    justify-content: center;
+}
+
+.item-box {
+    width: 97%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.current {
+    background-color: rgba(255, 255, 255, 0.973);
+}
+
+.ava-nick-box {
+    /* outline: 1px solid red; */
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ava-box {
+    border: 1px solid rgb(207, 207, 207);
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 50%;
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: run 15s linear infinite;
+}
+
+.ava-img {
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 60rpx;
+}
+
+.gender-box {
+    width: 50rpx;
+    height: 50rpx;
+    position: absolute;
+    /* outline: 1px solid red; */
+    right: 0;
+    bottom: 20rpx;
+}
+
+.icon-male {
+    font-size: 46rpx;
+    color: #0091FF;
+}
+
+.icon-female {
+    font-size: 46rpx;
+    color: #FF4D94;
+}
+
+@keyframes stay{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes run{
+    0%{
+        transform: rotateZ(360deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+.nickname {
+    color: rgb(0, 0, 0);
+    margin-top: 10rpx;
+    font-weight: bold;
+}
+
+.recsong-box {
+    /* outline: 1px solid green; */
+    height: 77%;
+    padding: 20rpx 40rpx;
+}
+
+.txt-rec {
+    font-size: 36rpx;
+    font-weight: bold;
+}
+
+.list {
+    /* outline: 1px solid blue; */
+    margin: 20rpx 0;
+    height: 180rpx;
+    display: flex;
+    align-items: center;
+}
+
+.cover-box {
+    /* outline: 1px solid purple; */
+    width: 160rpx;
+    height: 160rpx;
+    box-shadow: 7rpx 7rpx 30rpx rgba(0, 0, 0, 0.5);
+}
+
+.cover-box>image {
+    width: 100%;
+    height: 100%;
+}
+
+.songinfo-box {
+    /* outline: 1px solid purple; */
+    height: 160rpx;
+    width: 350rpx;
+    margin-left: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.songinfo-box text {
+    padding: 10rpx 0;
+}
+
+.name-box {
+    /* outline: 1px solid green; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.txt-name {
+    font-size: 30rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10rpx 0;
+}
+
+.icon-play {
+    margin-left: 20rpx;
+}
+
+.icon-paus {
+    margin-left: 20rpx;
+}

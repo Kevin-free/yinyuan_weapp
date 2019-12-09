@@ -1,0 +1,26 @@
+<!--pages/xzyy/share/share.wxml 分享界面 -->
+
+<!-- 引入自定义组件。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<image class='bottombg' src='http://yinyuan.ifree258.top/bghd.jpg'></image>
+
+<!-- <view class='cont' style=" height:{{winHeight}}px"> -->
+<view class='con' style='margin-top: {{topHeight}}px; height: {{bHeight}}px'>
+  <view class='song-area'>
+    <text class='top-txt'>您此轮听到的音乐如下：</text>
+    <block wx:for="{{song}}" wx:key="*this">
+      <view class='song-box' data-id='{{item.id}}' bindtap='toSongById'>
+        <text class='song-txt'>《{{item.name}} 》</text>
+        <text class='link-txt'>完整版传送门</text>
+      </view>
+    </block>
+  </view>
+
+  <view class='share-area'>
+    <text>谁会是你的最佳音缘人呢？</text>
+    <!-- <view class='btn-shadow'> -->
+      <button class='btn-share' open-type='share'>点击寻找</button>
+    <!-- </view> -->
+  </view>
+</view>

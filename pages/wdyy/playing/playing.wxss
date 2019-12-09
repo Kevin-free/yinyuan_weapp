@@ -1,0 +1,727 @@
+<<<<<<< HEAD
+/* pages/wdyy/playing/playing.wxss */
+.blurbg {
+  /* outline: 1px solid pink; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
+  background-repeat: no-repeat;
+  transform: scale(1.2);
+}
+
+/* 唱针的上一级父容器 */
+
+.con {
+  /* outline: 1px solid purple; */
+  /* height: 100%; */
+  overflow: hidden;
+  position: relative;
+}
+
+/* 唱针样式 */
+.cz {
+  /* outline: 1px solid red; */
+  width: 222rpx;
+  /* height: 366rpx; */
+  height: 340rpx;
+  position: relative;
+  left: 310rpx;
+  top: -60rpx;
+  z-index: 2;
+  transform:rotate(-20deg);
+  transition: all 1s ease-in-out;
+  animation: cz 1s;
+  /* 设置旋转中心（默认以中心）*/
+  transform-origin: 52rpx 52rpx;
+}
+
+@keyframes cz {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-20deg);
+  }
+}
+
+.czplaying{
+  /* outline: 1px solid red; */
+  width: 222rpx;
+  /* height: 366rpx; */
+  height: 340rpx;
+  position: relative;
+  left: 310rpx;
+  top: -60rpx;
+  z-index: 2;
+  transform:rotate(0deg);
+  transition: all 1s ease-in-out;
+  animation: czplay 1s;
+  transform-origin: 52rpx 52rpx;
+}
+
+@keyframes czplay {
+  from {
+    transform: rotate(-20deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/**
+ * 黑胶唱片样式效果
+ */
+
+#cd-box {
+  /* outline: 1px solid red; */
+  position: relative;
+  top: -200rpx;
+  /* top: -20vh; *//* top: -120px; *//* margin-top: 80px; */
+}
+
+.level_1 {
+  /* outline: 1px solid green; */
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+  position: relative;
+  /* top: 150rpx; */
+  top: 0;
+  border-radius: 50%;
+  /* 去掉此属性解决轻微直边问题 */
+  padding: 1rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 520rpx;
+  height: 520rpx;
+  animation: mymove 25s linear infinite;
+  animation-delay: 1s;
+  animation-play-state: paused;
+}
+
+.playing .level_1 {
+  animation-delay: 1s;
+  animation-play-state: running !important;
+}
+
+@keyframes mymove {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cd {
+  width: 100%;
+  height: 100%;
+  /* position: fixed; */
+  position: relative;
+  z-index: 2;
+}
+
+.cover {
+  width: 65%;
+  height: 65%;
+  /* width: 100%;
+  height: 100%; */
+  border-radius: 50%;
+  /* position: fixed; */
+  position: absolute;
+  z-index: 3;
+  padding-top: 0;
+}
+
+/* 下载功能区 */
+.op-box{
+  /* outline: 1px solid green; */
+  height: 120rpx;
+  position: relative;
+  top: -50rpx;
+  display: flex;
+  justify-content: center;
+}
+.download-box{
+  /* outline: 1px solid blue; */
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-download{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/* 拖动进度条区 */
+.move-jdt{
+  /* outline: 1px solid blue; */
+  height: 50rpx;
+  position: relative;
+  top: -50rpx;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 40rpx;
+}
+
+
+.time{
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.movable-area {
+  /* outline: 1px solid lightblue; */
+  /* width: 100%; */
+  width: 70%;
+  height: 35rpx;
+  position: absolute;
+  /* bottom: 5rpx; */
+  left: 15%;
+}
+
+.movable-view {
+  width: 35rpx;
+  height: 35rpx;
+  background: #fff;
+  /* box-shadow: 0px 10rpx 30rpx 0px rgba(0, 0, 0, 0.1); */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.move-jdt progress{
+  width: 100%;
+  margin: 0 20rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+}
+
+/* 播放控制区 */
+.control-box{
+  /* outline: 1px solid red; */
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+  top: -20px;
+}
+
+.play-box, .pre-box, .next-box, .mode-box, .list-box{
+  /* outline: 1px solid blue; */
+  width: 150rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-play {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+
+.img-pre, .img-next, .img-mode, .img-list{
+  width: 70rpx;
+  height: 70rpx;
+=======
+<<<<<<< HEAD
+/* pages/wdyy/playing/playing.wxss */
+.blurbg {
+  /* outline: 1px solid pink; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
+  background-repeat: no-repeat;
+  transform: scale(1.2);
+}
+
+/* 唱针的上一级父容器 */
+
+.con {
+  /* outline: 1px solid purple; */
+  /* height: 100%; */
+  overflow: hidden;
+  position: relative;
+}
+
+/* 唱针样式 */
+.cz {
+  /* outline: 1px solid red; */
+  width: 222rpx;
+  /* height: 366rpx; */
+  height: 340rpx;
+  position: relative;
+  left: 310rpx;
+  top: -60rpx;
+  z-index: 2;
+  transform:rotate(-20deg);
+  transition: all 1s ease-in-out;
+  animation: cz 1s;
+  /* 设置旋转中心（默认以中心）*/
+  transform-origin: 52rpx 52rpx;
+}
+
+@keyframes cz {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-20deg);
+  }
+}
+
+.czplaying{
+  /* outline: 1px solid red; */
+  width: 222rpx;
+  /* height: 366rpx; */
+  height: 340rpx;
+  position: relative;
+  left: 310rpx;
+  top: -60rpx;
+  z-index: 2;
+  transform:rotate(0deg);
+  transition: all 1s ease-in-out;
+  animation: czplay 1s;
+  transform-origin: 52rpx 52rpx;
+}
+
+@keyframes czplay {
+  from {
+    transform: rotate(-20deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/**
+ * 黑胶唱片样式效果
+ */
+
+#cd-box {
+  /* outline: 1px solid red; */
+  position: relative;
+  top: -200rpx;
+  /* top: -20vh; *//* top: -120px; *//* margin-top: 80px; */
+}
+
+.level_1 {
+  /* outline: 1px solid green; */
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+  position: relative;
+  /* top: 150rpx; */
+  top: 0;
+  border-radius: 50%;
+  /* 去掉此属性解决轻微直边问题 */
+  padding: 1rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 520rpx;
+  height: 520rpx;
+  animation: mymove 25s linear infinite;
+  animation-delay: 1s;
+  animation-play-state: paused;
+}
+
+.playing .level_1 {
+  animation-delay: 1s;
+  animation-play-state: running !important;
+}
+
+@keyframes mymove {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cd {
+  width: 100%;
+  height: 100%;
+  /* position: fixed; */
+  position: relative;
+  z-index: 2;
+}
+
+.cover {
+  width: 65%;
+  height: 65%;
+  /* width: 100%;
+  height: 100%; */
+  border-radius: 50%;
+  /* position: fixed; */
+  position: absolute;
+  z-index: 3;
+  padding-top: 0;
+}
+
+/* 下载功能区 */
+.op-box{
+  /* outline: 1px solid green; */
+  height: 120rpx;
+  position: relative;
+  top: -50rpx;
+  display: flex;
+  justify-content: center;
+}
+.download-box{
+  /* outline: 1px solid blue; */
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-download{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/* 拖动进度条区 */
+.move-jdt{
+  /* outline: 1px solid blue; */
+  height: 50rpx;
+  position: relative;
+  top: -50rpx;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 40rpx;
+}
+
+
+.time{
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.movable-area {
+  /* outline: 1px solid lightblue; */
+  /* width: 100%; */
+  width: 70%;
+  height: 35rpx;
+  position: absolute;
+  /* bottom: 5rpx; */
+  left: 15%;
+}
+
+.movable-view {
+  width: 35rpx;
+  height: 35rpx;
+  background: #fff;
+  /* box-shadow: 0px 10rpx 30rpx 0px rgba(0, 0, 0, 0.1); */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.move-jdt progress{
+  width: 100%;
+  margin: 0 20rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+}
+
+/* 播放控制区 */
+.control-box{
+  /* outline: 1px solid red; */
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+  top: -20px;
+}
+
+.play-box, .pre-box, .next-box, .mode-box, .list-box{
+  /* outline: 1px solid blue; */
+  width: 150rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-play {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+
+.img-pre, .img-next, .img-mode, .img-list{
+  width: 70rpx;
+  height: 70rpx;
+=======
+/* pages/wdyy/playing/playing.wxss */
+.blurbg {
+  /* outline: 1px solid pink; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
+  background-repeat: no-repeat;
+  transform: scale(1.2);
+}
+
+/* 唱针的上一级父容器 */
+
+.con {
+  /* outline: 1px solid purple; */
+  /* height: 100%; */
+  overflow: hidden;
+  position: relative;
+}
+
+/* 唱针样式 */
+.cz {
+  /* outline: 1px solid red; */
+  width: 222rpx;
+  /* height: 366rpx; */
+  height: 340rpx;
+  position: relative;
+  left: 310rpx;
+  top: -60rpx;
+  z-index: 2;
+  transform:rotate(-20deg);
+  transition: all 1s ease-in-out;
+  animation: cz 1s;
+  /* 设置旋转中心（默认以中心）*/
+  transform-origin: 52rpx 52rpx;
+}
+
+@keyframes cz {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-20deg);
+  }
+}
+
+.czplaying{
+  /* outline: 1px solid red; */
+  width: 222rpx;
+  /* height: 366rpx; */
+  height: 340rpx;
+  position: relative;
+  left: 310rpx;
+  top: -60rpx;
+  z-index: 2;
+  transform:rotate(0deg);
+  transition: all 1s ease-in-out;
+  animation: czplay 1s;
+  transform-origin: 52rpx 52rpx;
+}
+
+@keyframes czplay {
+  from {
+    transform: rotate(-20deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/**
+ * 黑胶唱片样式效果
+ */
+
+#cd-box {
+  /* outline: 1px solid red; */
+  position: relative;
+  top: -200rpx;
+  /* top: -20vh; *//* top: -120px; *//* margin-top: 80px; */
+}
+
+.level_1 {
+  /* outline: 1px solid green; */
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 auto;
+  position: relative;
+  /* top: 150rpx; */
+  top: 0;
+  border-radius: 50%;
+  /* 去掉此属性解决轻微直边问题 */
+  padding: 1rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 520rpx;
+  height: 520rpx;
+  animation: mymove 25s linear infinite;
+  animation-delay: 1s;
+  animation-play-state: paused;
+}
+
+.playing .level_1 {
+  animation-delay: 1s;
+  animation-play-state: running !important;
+}
+
+@keyframes mymove {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cd {
+  width: 100%;
+  height: 100%;
+  /* position: fixed; */
+  position: relative;
+  z-index: 2;
+}
+
+.cover {
+  width: 65%;
+  height: 65%;
+  /* width: 100%;
+  height: 100%; */
+  border-radius: 50%;
+  /* position: fixed; */
+  position: absolute;
+  z-index: 3;
+  padding-top: 0;
+}
+
+/* 下载功能区 */
+.op-box{
+  /* outline: 1px solid green; */
+  height: 120rpx;
+  position: relative;
+  top: -50rpx;
+  display: flex;
+  justify-content: center;
+}
+.download-box{
+  /* outline: 1px solid blue; */
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-download{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/* 拖动进度条区 */
+.move-jdt{
+  /* outline: 1px solid blue; */
+  height: 50rpx;
+  position: relative;
+  top: -50rpx;
+  display: flex;
+  align-items: center;
+  padding: 10rpx 40rpx;
+}
+
+
+.time{
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.movable-area {
+  /* outline: 1px solid lightblue; */
+  /* width: 100%; */
+  width: 70%;
+  height: 35rpx;
+  position: absolute;
+  /* bottom: 5rpx; */
+  left: 15%;
+}
+
+.movable-view {
+  width: 35rpx;
+  height: 35rpx;
+  background: #fff;
+  /* box-shadow: 0px 10rpx 30rpx 0px rgba(0, 0, 0, 0.1); */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.move-jdt progress{
+  width: 100%;
+  margin: 0 20rpx;
+  border-radius: 50rpx;
+  overflow: hidden;
+}
+
+/* 播放控制区 */
+.control-box{
+  /* outline: 1px solid red; */
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+  top: -20px;
+}
+
+.play-box, .pre-box, .next-box, .mode-box, .list-box{
+  /* outline: 1px solid blue; */
+  width: 150rpx;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-play {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+
+.img-pre, .img-next, .img-mode, .img-list{
+  width: 70rpx;
+  height: 70rpx;
+>>>>>>> renew
+>>>>>>> 2019/12/9
+}

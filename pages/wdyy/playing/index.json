@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+{
+  "disableScroll":true,
+  "usingComponents": {
+    "nav-bar": "/components/navbar/wdyy"
+  },
+  "navigationStyle": "custom"
+=======
+<<<<<<< HEAD
+{
+  "disableScroll":true,
+  "usingComponents": {
+    "nav-bar": "/components/navbar/wdyy"
+  },
+  "navigationStyle": "custom"
+=======
+{
+  "disableScroll":true,
+  "usingComponents": {
+    "nav-bar": "/components/navbar/wdyy"
+  },
+  "navigationStyle": "custom"
+>>>>>>> renew
+>>>>>>> 2019/12/9
+}

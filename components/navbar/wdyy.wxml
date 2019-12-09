@@ -1,0 +1,25 @@
+<!--components/navbar/wdyy.wxml 音乐播放型导航栏-->
+<view class='nav-wrap' style='margin-top: {{barHeight}}px;'>
+  <!-- // 导航栏 左上角的返回按钮 和home按钮 // 其中wx:if='{{navbarData.showCapsule}}' 是控制左上角按钮的显示隐藏，首页不显示 -->
+  <view class='nav-capsule' style='width:{{lWidth}}px;'>
+    <!-- //左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示 //从分享进入小程序时 返回上一级按钮不应该存在 -->
+    <view class='back-box' bindtap='_navback'>
+      <view class='iconfont icon-back'></view>
+    </view>
+    <!-- 音乐信息 -->
+    <view class='musicInfo' bindtap='infoDetail'>
+      <!-- 注意此跑马灯效果真机连电脑调试会很卡 -->
+      <view class="rollCon">
+        <view class="song-box">
+          <view class='txt-mName' style='left:{{offsetLeft}}px'>{{navbarData.name}}</view>
+        </view>
+      </view>
+      <!-- <text class='txt-mName'>{{songList[currentSongIndex].name}}</text> -->
+      <text class='txt-mAuthor iconfont icon-info'>{{navbarData.author}}</text>
+    </view>
+    <!-- <view class='song_box'>
+      <text class='name_txt'>{{navbarData.name}}</text>
+      <text class='author_txt'>{{navbarData.author}}</text>
+    </view> -->
+  </view>
+</view>

@@ -1,0 +1,94 @@
+<!--pages/xzyy/xzyy2.wxml 寻找音缘 -->
+<!-- <import src="../../utils/playpercent.wxml" /> -->
+
+<!-- 引入自定义组件。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<!-- 模糊背景 -->
+<!-- <view class="blurbg" style="background-image: url({{songList[currentSongIndex].cover}})"></view> -->
+<!-- <view class="blurbg" style="background-image: url(http://yinyuan.ifree258.top/bg1.gif)"></view> -->
+<image class='gifbg' src='http://yinyuan.ifree258.top/bg3.gif'></image>
+
+<!-- 剩余下部内容区 -->
+<view class='con' style='margin-top: {{topHeight}}px; height: {{bHeight}}px'>
+
+  <!-- 歌名及进度条区 -->
+  <view class='rowCenter'>
+    <view class='voice'>
+      <!-- 歌信息及按钮区 -->
+      <view class='head'>
+        <!-- 歌信息 -->
+        <view class='musicInfo'>
+          <!-- 注意此跑马灯效果真机连电脑调试会很卡 -->
+          <view class="rollCon">
+            <view class="song-box">
+              <view class='txt-mName' style='left:{{offsetLeft}}px'>{{songList[currentSongIndex].name}}</view>
+            </view>
+          </view>
+          <!-- <text class='txt-mName'>{{songList[currentSongIndex].name}}</text> -->
+          <text class='txt-mAuthor'>{{songList[currentSongIndex].author}}</text>
+        </view>
+        <!-- 按钮区 -->
+        <view class='btn-box'>
+          <!-- 音量静音按钮 -->
+          <view class='btn-volum' bindtap='volumClick'>
+            <image src="/assets/images/{{voice.muteVolum?'muteVolum.png':'maxVolum.png'}}" class='img-volum'></image>
+          </view>
+          <!-- 播放暂停按钮 -->
+          <view class='btn-play' bindtap='voiceClick'>
+            <image src="/image/{{voice.playing?'ajd.png':'ajf.png'}}" class='img-play'></image>
+          </view>
+          <!-- 喜欢红心按钮 -->
+          <view class='btn-like' bindtap='likeClick'>
+            <!-- <image src="/assets/images/a_r.png" class='img-like'></image> -->
+            <image src="/image/cm2_play_icn_love@2x.png" class='img-like' wx:if="{{!music.st}}"></image>
+            <image src="/image/cm2_play_icn_loved@2x.png" class='img-like' wx:if="{{music.st}}"></image>
+          </view>
+        </view>
+      </view>
+
+      <!-- 播放进度条区 -->
+      <view class="playing-status">
+        <text class='time' space='ensp'>{{voice.time.min}}:{{voice.time.sec}}</text>
+        <progress class='progress' stroke-width='2' backgroundColor='#fff' activeColor='#2BA9E9' percent='{{voice.progress}}'></progress>
+        <text class='time' space='ensp'>{{voice.duration.min}}:{{voice.duration.sec}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 黑胶唱片部分 -->
+  <view id='cd-box' class="{{voice.playing?'playing ':' '}}">
+    <view class="level_1">
+      <!-- <image class='cd' src='http://yinyuan.ifree258.top/cd.png'></image> -->
+      <image class='cover' src="{{songList[currentSongIndex].cover}}?param=200y200"></image>
+      <!-- <image class='cover' src="{{songList[currentSongIndex].cover}}"></image> -->
+    </view>
+  </view>
+
+  <!-- 感受选项区 -->
+  <view class='weui-grids'>
+
+    <!-- 未显示感受时显示loading -->
+    <image wx:if="{{!showFeel}}" class='loading-box' src='http://yinyuan.ifree258.top/loading4.gif'></image>
+
+    <block wx:if="{{showFeel}}" wx:for="{{feelList}}" wx:key="{{item.id}}">
+      <view class="weui-grid" hover-class="weui-grid_active" bindtap="toNextSong" data-id='{{item.id}}'>
+        <view class='btn-area'>
+          <text class='btn-txt'>{{item.content}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<!-- 模态框 -->
+<!-- <view class="modal-mask" wx:if="{{showModal}}"></view> -->
+<!-- 提示模态框 -->
+<!-- <view wx:if="{{showModalTip}}">
+  <view class='modal-content'>
+    <image class='modal-img' src='/assets/images/yunduo.jpg'></image>
+    <text class='modal-txt'>玩法介绍</text>
+    <text class='modal-txt-intr'>接下来您将听到随机的五首歌曲，以下\n是获取的音乐热评关键字，请根据您的\n感受选择一个选项，完成后可分享，\n寻找您的最佳音缘。</text>
+  </view>
+  <view class='modal-button' bindtap="hideModal">知道了</view>
+</view> -->

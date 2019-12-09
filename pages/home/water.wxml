@@ -1,0 +1,17 @@
+<!--pages/home/water.wxml-->
+<view class="container">
+  <view class='countDown'>
+    <text>{{countDownHour}}:{{countDownMinute}}:{{countDownSecond}}</text>
+  </view>
+  <view class='countDown'>音感
+    <text style='color:red'>{{totalYG}}</text>
+  </view>
+  <view class="main clearfix">
+    <view class="drop" bindtap='gainYG'>
+      <view class="drop-txt">{{gainYG}}/60</view>
+      <view class="{{dropping? 'dropping':''}}"></view>
+      <!-- <image class='drop-bg' src='/assets/images/sp.jpg'></image> -->
+      <view class="drop-after" style="height:{{waterHeight}}rpx"></view>
+    </view>
+  </view>
+</view>

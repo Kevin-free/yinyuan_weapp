@@ -1,0 +1,1590 @@
+<<<<<<< HEAD
+/* pages/home/home.wxss */
+
+.con {
+  /* outline: 1px solid red; */
+}
+
+.top-box {
+  /* outline: 1px solid green; *//* height: 500rpx; */
+  width: calc(100%);
+  height: 40%;
+  /* background-color: rgba(92, 66, 187, 0.911); *//* background-image: url(http://yinyuan.ifree258.top/topbg750.png);
+  background-repeat: no-repeat;
+  background-size:contain; */
+  display: flex;
+  /* justify-content: center; */
+}
+
+.top-box>image {
+  width: 100%;
+  height: 40%;
+  position: fixed;
+  z-index: -1;
+}
+
+.info-box {
+  /* outline: 1px solid red; *//* width: 200rpx; */
+  width: 100%;
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-box {
+  border: 3rpx solid #fff;
+  border-radius: 50%;
+  width: 130rpx;
+  height: 130rpx;
+  padding: 5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userinfo-avatar {
+  /* border: 2px solid #fff; */
+  width: 100%;
+  height: 100%;
+  /* padding: 10rpx; */
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  margin-top: 10rpx;
+  font-size: 36rpx;
+  /* font-family: Microsoft YaHei; */
+}
+
+.yg-box {
+  /* outline: 1px solid blue; *//* margin-top: 20rpx; */
+  display: flex;
+  align-items: center;
+}
+
+.yg-txt {
+  color: #fff;
+}
+
+.bottom-box {
+  /* outline: 1px solid blue; */
+  height: 60%;
+  /* background-color: rgba(236, 234, 245, 0.945); */
+  display: flex;
+}
+
+.left-box {
+  /* outline: 1px solid pink;
+  background-color: pink; */
+  width: 50%;
+  margin: 0 20rpx 0 40rpx;
+}
+
+.l1 {
+  /* outline: 1px solid red; */
+  width: 100%;
+  /* height: 350rpx; *//* 用vh解决全面屏适应问题 */
+  height: 25vh;
+  /* background-color: rgb(245, 151, 43); */
+  border-radius: 20rpx;
+  /* margin-top: 40rpx; */
+}
+
+.l1>image {
+  width: 100%;
+  height: 100%;
+}
+
+.l2 {
+  /* outline: 1px solid red; *//* height: 200rpx; */
+  height: 15vh;
+  /* background-color: rgb(147, 43, 245); */
+  border-radius: 20rpx;
+  margin-top: 40rpx;
+}
+
+.l2>image {
+  width: 100%;
+  height: 100%;
+}
+
+.l3 {
+  /* outline: 1px solid red; *//* height: 200rpx; */
+  height: 14vh;
+  /* background-color: rgb(43, 131, 245); *//* background-image: url(http://yinyuan.ifree258.top/ygyq.png);
+  background-repeat: no-repeat;
+  background-size:contain; */
+  border-radius: 20rpx;
+  /* margin-top: 40rpx; */
+  margin-top: 30rpx;
+  position: relative;
+}
+
+.l3>image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+}
+
+.right-box {
+  /* outline: 1px solid purple;
+  background-color: purple; */
+  width: 50%;
+  margin: 0 40rpx 0 20rpx;
+}
+
+.item {
+  /* outline: 1px solid red; *//* width: 100%; *//* height: 300rpx; *//* height: 22vh; */
+  border-radius: 20rpx;
+  position: relative;
+  /* margin-top: 40rpx; */
+  box-shadow: 7rpx 7rpx 30rpx rgba(0, 0, 0, 0.5);
+}
+
+.item>image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* left: 10rpx;
+  top: 10rpx; */
+}
+
+/* 水滴效果 */
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* Main Content */
+
+.main {
+  max-width: 69em;
+  min-height: 15em;
+}
+
+.drop {
+  /* border: 1px solid rgb(236, 30, 30); *//* border-top: 1px solid rgb(255, 255, 255); */
+  border-radius: 20rpx;
+  /* box-shadow: inset -0.1em 0 2em 0.5em rgba(255, 255, 255, 0.5), inset -0.1em 0 0.5em 0 rgba(0, 0, 0, 0.8); *//* position: relative; */
+  position: absolute;
+  /* margin: 0 auto; *//* width: 15em;
+  height: 15em; */
+  width: 60rpx;
+  height: 120rpx;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  /* transform: rotateX(70deg);  *//* transform: rotateX(50deg);  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 200rpx; */
+  right: 20rpx;
+  bottom: 0rpx;
+}
+
+.drop-txt {
+  /* outline: 1px solid red; *//* color: #fff; */
+  font-size: 20rpx;
+  /* position: absolute; *//* left: 42%; *//* bottom: 50%; */
+}
+
+.dropping {
+  background: rgba(167, 217, 234, 1);
+  border-radius: 100%;
+  /* box-shadow: h-shadow v-shadow blur spread color inset; *//* box-shadow: 0 0 0 0.1em rgba(167, 217, 234, 0.8),
+                0 0 0 0.15em rgba(167, 217, 234, 0.8),
+                0 0 0 0.2em rgba(167, 227, 234, 0.8),
+                0 0 0 0.25em rgba(167, 227, 234, 0.8),
+                0 0 0 0.3em rgba(167, 227, 234, 0.8),
+                0 0 0 0.35em rgba(167, 227, 234, 0.8),
+                0 0 0 0.4em rgba(167, 227, 234, 0.8),
+                0 0 0 0.45em rgba(167, 227, 234, 0.8),
+                0 0 0 0.5em rgba(167, 227, 234, 0.8); */
+  box-shadow: 0 0 0 0.025em rgba(167, 217, 234, 0.8),
+                0 0 0 0.03em rgba(167, 217, 234, 0.8),
+                0 0 0 0.05em rgba(167, 227, 234, 0.8),
+                0 0 0 0.06em rgba(167, 227, 234, 0.8),
+                0 0 0 0.07em rgba(167, 227, 234, 0.8),
+                0 0 0 0.08em rgba(167, 227, 234, 0.8),
+                0 0 0 0.1em rgba(167, 227, 234, 0.8),
+                0 0 0 0.11em rgba(167, 227, 234, 0.8),
+                0 0 0 0.12em rgba(167, 227, 234, 0.8);
+  top: 0%;
+  left: 50%;
+  width: 0.025em;
+  height: 0.025em;
+  /* width: 0.5rpx;
+  height: 0.5rpx; */
+  animation: fall 3.5s cubic-bezier(0.5, 0, 1, 0.5) infinite;
+  display: block;
+  position: absolute;
+}
+
+/* 此处height控制动画后水的高度 */
+
+.drop-after {
+  background: rgb(52, 152, 219);
+  background: linear-gradient(rgba(52, 255, 255, 1) 0%, rgba(52, 152, 219, 1) 10%, rgba(152, 252, 219, 1) 100%);
+  /* border-radius: 100% 0 50% 0; */
+  left: 0;
+  bottom: 0;
+  width: inherit;
+  height: 3em;
+  opacity: 0.7;
+  /* animation: surface 3s linear infinite; *//* width: 15em; */
+  display: block;
+  position: absolute;
+}
+
+@keyframes fall {
+  /* box-shadow: h-shadow v-shadow blur spread color inset; */
+
+  5%, 15% {
+    /* box-shadow: 0 -1.4em 0 0.1em rgba(167, 217, 234, 1),
+                    0 -0.8em 0 0.15em rgba(167, 217, 234, 1),
+                    0 -0.3em 0 0.2em rgba(167, 217, 234, 1),
+                    0 -0.1em 0 0.25em rgba(167, 217, 234, 1),
+                    0 0 0 0.3em rgba(167, 217, 234, 1),
+                    0 0.2em 0 0.35em rgba(167, 217, 234, 1),
+                    0 0.4em 0 0.4em rgba(167, 217, 234, 1),
+                    0 0.6em 0 0.45em rgba(167, 217, 234, 1),
+                    0 0.8em 0 0.5em rgba(167, 217, 234, 1); */
+    box-shadow: 0 -1.4em 0 0.025em rgba(167, 217, 234, 1),
+                    0 -0.8em 0 0.04em rgba(167, 217, 234, 1),
+                    0 -0.3em 0 0.05em rgba(167, 217, 234, 1),
+                    0 -0.1em 0 0.06em rgba(167, 217, 234, 1),
+                    0 0 0 0.07em rgba(167, 217, 234, 1),
+                    0 0.2em 0 0.08em rgba(167, 217, 234, 1),
+                    0 0.4em 0 0.1em rgba(167, 217, 234, 1),
+                    0 0.6em 0 0.11em rgba(167, 217, 234, 1),
+                    0 0.8em 0 0.12em rgba(167, 217, 234, 1);
+  }
+
+  16% {
+    /* top: 80%; */
+    top: 100%;
+  }
+
+  18% {
+    /* top: 80%; */
+    top: 100%;
+    /* box-shadow: 1em -8em 0 0.2em rgba(177, 227, 234, 1),
+                    -2.2em -3.8em 0 0.1em rgba(177, 227, 234, 1),
+                    3em -2.85em 0 0.3em rgba(177, 227, 234, 1),
+                    -3.5em -4em 0 0.2em rgba(177, 227, 234, 1),
+                    0 0 0 0.3em rgba(177, 227, 234, 1),
+                    2em -2em 0 0.2em rgba(177, 227, 234, 1),
+                    -0.3em -3em 0 0.2em rgba(177, 227, 234, 1),
+                    0.5em -5em 0 0.35em rgba(177, 227, 234, 1),
+                    -3em -1em 0 0.3em rgba(177, 227, 234, 1); */
+    box-shadow: 1em -8em 0 0.05em rgba(177, 227, 234, 1),
+                    -2.2em -3.8em 0 0.025em rgba(177, 227, 234, 1),
+                    3em -2.85em 0 0.07em rgba(177, 227, 234, 1),
+                    -3.5em -4em 0 0.05em rgba(177, 227, 234, 1),
+                    0 0 0 0.07em rgba(177, 227, 234, 1),
+                    2em -2em 0 0.05em rgba(177, 227, 234, 1),
+                    -0.3em -3em 0 0.05em rgba(177, 227, 234, 1),
+                    0.5em -5em 0 0.08em rgba(177, 227, 234, 1),
+                    -3em -1em 0 0.07em rgba(177, 227, 234, 1);
+  }
+
+  30% {
+    /* top: 90%; */
+    top: 95%;
+    /* box-shadow: 1.5em 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.15em rgba(252, 252, 255, 0.1),
+                    3em 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.25em rgba(252, 252, 255, 0.1),
+                    0 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    2.35em 0 0 0.3em rgba(252, 252, 255, 0.1),
+                    -0.5em 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    1em 0 0 0.3em rgba(252, 252, 255, 0.1),
+                    -4em 0 0 0.4em rgba(252, 252, 255, 0.1); */
+    box-shadow: 1.5em 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.03em rgba(252, 252, 255, 0.1),
+                    3em 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.06em rgba(252, 252, 255, 0.1),
+                    0 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    2.35em 0 0 0.07em rgba(252, 252, 255, 0.1),
+                    -0.5em 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    1em 0 0 0.07em rgba(252, 252, 255, 0.1),
+                    -4em 0 0 0.1em rgba(252, 252, 255, 0.1);
+  }
+
+  40%, 100% {
+    /* top: 95%; */
+    top: 100%;
+    background: rgba(255, 255, 255, 1);
+    /* box-shadow: 1.8em 0.5em 0 0.2em rgba(255, 255, 255, 0),
+                    -3em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    4em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    -3.5em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    0 0 0 0.3em rgba(255, 255, 215, 0),
+                    2.45em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    -0.8em 0.5em 0 0.2em rgba(255, 255, 255, 0),
+                    1.5em 0.5em 0 0.3em rgba(255, 255, 255, 0),
+                    -4.5em 0.5em 0 0.2em rgba(255, 255, 255, 0); */
+    box-shadow: 1.8em 0.5em 0 0.05em rgba(255, 255, 255, 0),
+                    -3em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    4em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    -3.5em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    0 0 0 0.07em rgba(255, 255, 215, 0),
+                    2.45em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    -0.8em 0.5em 0 0.05em rgba(255, 255, 255, 0),
+                    1.5em 0.5em 0 0.07em rgba(255, 255, 255, 0),
+                    -4.5em 0.5em 0 0.05em rgba(255, 255, 255, 0);
+  }
+}
+
+.drop-bg {
+  /* outline: 1px solid red; */
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.countDown {
+  /* outline: 1px solid blue; */
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  z-index: 1;
+}
+
+.count-txt {
+  /* color: #fff; */
+  font-size: 22rpx;
+}
+
+/* 模态框 */
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-photo {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 9999;
+  margin: -100rpx -90rpx;
+}
+
+.modal-photo-sz {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  z-index: 9999;
+  margin: -100rpx -100rpx;
+}
+
+.top-img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.modal-content {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 9500;
+  width: 600rpx;
+  height: 45%;
+  overflow: hidden;
+  padding: 120rpx 0;
+  background: #fff;
+  margin: 0rpx -300rpx;
+  border-radius: 20rpx;
+}
+
+.modal-content-sz {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  z-index: 9500;
+  width: 500rpx;
+  height: 35%;
+  overflow: hidden;
+  padding: 120rpx 0;
+  background: #fff;
+  margin: 0rpx -250rpx;
+  border-radius: 20rpx;
+}
+
+.modal-title {
+  /* outline: 1px solid skyblue; */
+  height: 100rpx;
+  width: 100%;
+  background-color: #00b7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title-sz {
+  /* outline: 1px solid skyblue; */
+  height: 100rpx;
+  width: 100%;
+  background-color: #87ceeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title-txt {
+  color: #fff;
+  font-size: 48rpx;
+  font-family: "微软雅黑";
+}
+
+.item-box {
+  /* outline: 1px solid red; */
+  border-bottom: 2px solid #ccc;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 50rpx;
+}
+
+.item-box-sz {
+  /* outline: 1px solid red; *//* border-bottom: 2px solid #ccc; */
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 50rpx 50rpx; */
+  margin-top: 100rpx;
+}
+
+.item-box>text {
+  font-size: 36rpx;
+}
+
+.item-box-button {
+  /* outline: 1px solid blue; */
+  background-color: #80f9e7;
+  height: 100rpx;
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-box-button>text {
+  color: #fff;
+  font-size: 42rpx;
+}
+
+.btn-sq {
+  width: 250rpx;
+}
+
+.icon-box {
+  /* outline: 1px solid red; */
+  margin-top: 20rpx;
+  display: flex;
+  width: 400rpx;
+  justify-content: space-between;
+}
+
+.iconfont {
+  margin-top: 8rpx;
+}
+
+.icon-yingan {
+  color: #00c6fb;
+}
+
+.icon-yinfu {
+  color: #f1e172;
+}
+
+.zxpp-txt {
+  position: absolute;
+  color: #fff;
+  bottom: 0rpx;
+  left: 10rpx;
+  font-size: 30rpx;
+}
+=======
+<<<<<<< HEAD
+/* pages/home/home.wxss */
+
+.con {
+  /* outline: 1px solid red; */
+}
+
+.top-box {
+  /* outline: 1px solid green; *//* height: 500rpx; */
+  width: calc(100%);
+  height: 40%;
+  /* background-color: rgba(92, 66, 187, 0.911); *//* background-image: url(http://yinyuan.ifree258.top/topbg750.png);
+  background-repeat: no-repeat;
+  background-size:contain; */
+  display: flex;
+  /* justify-content: center; */
+}
+
+.top-box>image {
+  width: 100%;
+  height: 40%;
+  position: fixed;
+  z-index: -1;
+}
+
+.info-box {
+  /* outline: 1px solid red; *//* width: 200rpx; */
+  width: 100%;
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-box {
+  border: 3rpx solid #fff;
+  border-radius: 50%;
+  width: 130rpx;
+  height: 130rpx;
+  padding: 5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userinfo-avatar {
+  /* border: 2px solid #fff; */
+  width: 100%;
+  height: 100%;
+  /* padding: 10rpx; */
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  margin-top: 10rpx;
+  font-size: 36rpx;
+  /* font-family: Microsoft YaHei; */
+}
+
+.yg-box {
+  /* outline: 1px solid blue; *//* margin-top: 20rpx; */
+  display: flex;
+  align-items: center;
+}
+
+.yg-txt {
+  color: #fff;
+}
+
+.bottom-box {
+  /* outline: 1px solid blue; */
+  height: 60%;
+  /* background-color: rgba(236, 234, 245, 0.945); */
+  display: flex;
+}
+
+.left-box {
+  /* outline: 1px solid pink;
+  background-color: pink; */
+  width: 50%;
+  margin: 0 20rpx 0 40rpx;
+}
+
+.l1 {
+  /* outline: 1px solid red; */
+  width: 100%;
+  /* height: 350rpx; *//* 用vh解决全面屏适应问题 */
+  height: 25vh;
+  /* background-color: rgb(245, 151, 43); */
+  border-radius: 20rpx;
+  /* margin-top: 40rpx; */
+}
+
+.l1>image {
+  width: 100%;
+  height: 100%;
+}
+
+.l2 {
+  /* outline: 1px solid red; *//* height: 200rpx; */
+  height: 15vh;
+  /* background-color: rgb(147, 43, 245); */
+  border-radius: 20rpx;
+  margin-top: 40rpx;
+}
+
+.l2>image {
+  width: 100%;
+  height: 100%;
+}
+
+.l3 {
+  /* outline: 1px solid red; *//* height: 200rpx; */
+  height: 14vh;
+  /* background-color: rgb(43, 131, 245); *//* background-image: url(http://yinyuan.ifree258.top/ygyq.png);
+  background-repeat: no-repeat;
+  background-size:contain; */
+  border-radius: 20rpx;
+  /* margin-top: 40rpx; */
+  margin-top: 30rpx;
+  position: relative;
+}
+
+.l3>image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+}
+
+.right-box {
+  /* outline: 1px solid purple;
+  background-color: purple; */
+  width: 50%;
+  margin: 0 40rpx 0 20rpx;
+}
+
+.item {
+  /* outline: 1px solid red; *//* width: 100%; *//* height: 300rpx; *//* height: 22vh; */
+  border-radius: 20rpx;
+  position: relative;
+  /* margin-top: 40rpx; */
+  box-shadow: 7rpx 7rpx 30rpx rgba(0, 0, 0, 0.5);
+}
+
+.item>image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* left: 10rpx;
+  top: 10rpx; */
+}
+
+/* 水滴效果 */
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* Main Content */
+
+.main {
+  max-width: 69em;
+  min-height: 15em;
+}
+
+.drop {
+  /* border: 1px solid rgb(236, 30, 30); *//* border-top: 1px solid rgb(255, 255, 255); */
+  border-radius: 20rpx;
+  /* box-shadow: inset -0.1em 0 2em 0.5em rgba(255, 255, 255, 0.5), inset -0.1em 0 0.5em 0 rgba(0, 0, 0, 0.8); *//* position: relative; */
+  position: absolute;
+  /* margin: 0 auto; *//* width: 15em;
+  height: 15em; */
+  width: 60rpx;
+  height: 120rpx;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  /* transform: rotateX(70deg);  *//* transform: rotateX(50deg);  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 200rpx; */
+  right: 20rpx;
+  bottom: 0rpx;
+}
+
+.drop-txt {
+  /* outline: 1px solid red; *//* color: #fff; */
+  font-size: 20rpx;
+  /* position: absolute; *//* left: 42%; *//* bottom: 50%; */
+}
+
+.dropping {
+  background: rgba(167, 217, 234, 1);
+  border-radius: 100%;
+  /* box-shadow: h-shadow v-shadow blur spread color inset; *//* box-shadow: 0 0 0 0.1em rgba(167, 217, 234, 0.8),
+                0 0 0 0.15em rgba(167, 217, 234, 0.8),
+                0 0 0 0.2em rgba(167, 227, 234, 0.8),
+                0 0 0 0.25em rgba(167, 227, 234, 0.8),
+                0 0 0 0.3em rgba(167, 227, 234, 0.8),
+                0 0 0 0.35em rgba(167, 227, 234, 0.8),
+                0 0 0 0.4em rgba(167, 227, 234, 0.8),
+                0 0 0 0.45em rgba(167, 227, 234, 0.8),
+                0 0 0 0.5em rgba(167, 227, 234, 0.8); */
+  box-shadow: 0 0 0 0.025em rgba(167, 217, 234, 0.8),
+                0 0 0 0.03em rgba(167, 217, 234, 0.8),
+                0 0 0 0.05em rgba(167, 227, 234, 0.8),
+                0 0 0 0.06em rgba(167, 227, 234, 0.8),
+                0 0 0 0.07em rgba(167, 227, 234, 0.8),
+                0 0 0 0.08em rgba(167, 227, 234, 0.8),
+                0 0 0 0.1em rgba(167, 227, 234, 0.8),
+                0 0 0 0.11em rgba(167, 227, 234, 0.8),
+                0 0 0 0.12em rgba(167, 227, 234, 0.8);
+  top: 0%;
+  left: 50%;
+  width: 0.025em;
+  height: 0.025em;
+  /* width: 0.5rpx;
+  height: 0.5rpx; */
+  animation: fall 3.5s cubic-bezier(0.5, 0, 1, 0.5) infinite;
+  display: block;
+  position: absolute;
+}
+
+/* 此处height控制动画后水的高度 */
+
+.drop-after {
+  background: rgb(52, 152, 219);
+  background: linear-gradient(rgba(52, 255, 255, 1) 0%, rgba(52, 152, 219, 1) 10%, rgba(152, 252, 219, 1) 100%);
+  /* border-radius: 100% 0 50% 0; */
+  left: 0;
+  bottom: 0;
+  width: inherit;
+  height: 3em;
+  opacity: 0.7;
+  /* animation: surface 3s linear infinite; *//* width: 15em; */
+  display: block;
+  position: absolute;
+}
+
+@keyframes fall {
+  /* box-shadow: h-shadow v-shadow blur spread color inset; */
+
+  5%, 15% {
+    /* box-shadow: 0 -1.4em 0 0.1em rgba(167, 217, 234, 1),
+                    0 -0.8em 0 0.15em rgba(167, 217, 234, 1),
+                    0 -0.3em 0 0.2em rgba(167, 217, 234, 1),
+                    0 -0.1em 0 0.25em rgba(167, 217, 234, 1),
+                    0 0 0 0.3em rgba(167, 217, 234, 1),
+                    0 0.2em 0 0.35em rgba(167, 217, 234, 1),
+                    0 0.4em 0 0.4em rgba(167, 217, 234, 1),
+                    0 0.6em 0 0.45em rgba(167, 217, 234, 1),
+                    0 0.8em 0 0.5em rgba(167, 217, 234, 1); */
+    box-shadow: 0 -1.4em 0 0.025em rgba(167, 217, 234, 1),
+                    0 -0.8em 0 0.04em rgba(167, 217, 234, 1),
+                    0 -0.3em 0 0.05em rgba(167, 217, 234, 1),
+                    0 -0.1em 0 0.06em rgba(167, 217, 234, 1),
+                    0 0 0 0.07em rgba(167, 217, 234, 1),
+                    0 0.2em 0 0.08em rgba(167, 217, 234, 1),
+                    0 0.4em 0 0.1em rgba(167, 217, 234, 1),
+                    0 0.6em 0 0.11em rgba(167, 217, 234, 1),
+                    0 0.8em 0 0.12em rgba(167, 217, 234, 1);
+  }
+
+  16% {
+    /* top: 80%; */
+    top: 100%;
+  }
+
+  18% {
+    /* top: 80%; */
+    top: 100%;
+    /* box-shadow: 1em -8em 0 0.2em rgba(177, 227, 234, 1),
+                    -2.2em -3.8em 0 0.1em rgba(177, 227, 234, 1),
+                    3em -2.85em 0 0.3em rgba(177, 227, 234, 1),
+                    -3.5em -4em 0 0.2em rgba(177, 227, 234, 1),
+                    0 0 0 0.3em rgba(177, 227, 234, 1),
+                    2em -2em 0 0.2em rgba(177, 227, 234, 1),
+                    -0.3em -3em 0 0.2em rgba(177, 227, 234, 1),
+                    0.5em -5em 0 0.35em rgba(177, 227, 234, 1),
+                    -3em -1em 0 0.3em rgba(177, 227, 234, 1); */
+    box-shadow: 1em -8em 0 0.05em rgba(177, 227, 234, 1),
+                    -2.2em -3.8em 0 0.025em rgba(177, 227, 234, 1),
+                    3em -2.85em 0 0.07em rgba(177, 227, 234, 1),
+                    -3.5em -4em 0 0.05em rgba(177, 227, 234, 1),
+                    0 0 0 0.07em rgba(177, 227, 234, 1),
+                    2em -2em 0 0.05em rgba(177, 227, 234, 1),
+                    -0.3em -3em 0 0.05em rgba(177, 227, 234, 1),
+                    0.5em -5em 0 0.08em rgba(177, 227, 234, 1),
+                    -3em -1em 0 0.07em rgba(177, 227, 234, 1);
+  }
+
+  30% {
+    /* top: 90%; */
+    top: 95%;
+    /* box-shadow: 1.5em 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.15em rgba(252, 252, 255, 0.1),
+                    3em 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.25em rgba(252, 252, 255, 0.1),
+                    0 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    2.35em 0 0 0.3em rgba(252, 252, 255, 0.1),
+                    -0.5em 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    1em 0 0 0.3em rgba(252, 252, 255, 0.1),
+                    -4em 0 0 0.4em rgba(252, 252, 255, 0.1); */
+    box-shadow: 1.5em 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.03em rgba(252, 252, 255, 0.1),
+                    3em 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.06em rgba(252, 252, 255, 0.1),
+                    0 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    2.35em 0 0 0.07em rgba(252, 252, 255, 0.1),
+                    -0.5em 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    1em 0 0 0.07em rgba(252, 252, 255, 0.1),
+                    -4em 0 0 0.1em rgba(252, 252, 255, 0.1);
+  }
+
+  40%, 100% {
+    /* top: 95%; */
+    top: 100%;
+    background: rgba(255, 255, 255, 1);
+    /* box-shadow: 1.8em 0.5em 0 0.2em rgba(255, 255, 255, 0),
+                    -3em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    4em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    -3.5em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    0 0 0 0.3em rgba(255, 255, 215, 0),
+                    2.45em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    -0.8em 0.5em 0 0.2em rgba(255, 255, 255, 0),
+                    1.5em 0.5em 0 0.3em rgba(255, 255, 255, 0),
+                    -4.5em 0.5em 0 0.2em rgba(255, 255, 255, 0); */
+    box-shadow: 1.8em 0.5em 0 0.05em rgba(255, 255, 255, 0),
+                    -3em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    4em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    -3.5em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    0 0 0 0.07em rgba(255, 255, 215, 0),
+                    2.45em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    -0.8em 0.5em 0 0.05em rgba(255, 255, 255, 0),
+                    1.5em 0.5em 0 0.07em rgba(255, 255, 255, 0),
+                    -4.5em 0.5em 0 0.05em rgba(255, 255, 255, 0);
+  }
+}
+
+.drop-bg {
+  /* outline: 1px solid red; */
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.countDown {
+  /* outline: 1px solid blue; */
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  z-index: 1;
+}
+
+.count-txt {
+  /* color: #fff; */
+  font-size: 22rpx;
+}
+
+/* 模态框 */
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-photo {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 9999;
+  margin: -100rpx -90rpx;
+}
+
+.modal-photo-sz {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  z-index: 9999;
+  margin: -100rpx -100rpx;
+}
+
+.top-img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.modal-content {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 9500;
+  width: 600rpx;
+  height: 45%;
+  overflow: hidden;
+  padding: 120rpx 0;
+  background: #fff;
+  margin: 0rpx -300rpx;
+  border-radius: 20rpx;
+}
+
+.modal-content-sz {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  z-index: 9500;
+  width: 500rpx;
+  height: 35%;
+  overflow: hidden;
+  padding: 120rpx 0;
+  background: #fff;
+  margin: 0rpx -250rpx;
+  border-radius: 20rpx;
+}
+
+.modal-title {
+  /* outline: 1px solid skyblue; */
+  height: 100rpx;
+  width: 100%;
+  background-color: #00b7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title-sz {
+  /* outline: 1px solid skyblue; */
+  height: 100rpx;
+  width: 100%;
+  background-color: #87ceeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title-txt {
+  color: #fff;
+  font-size: 48rpx;
+  font-family: "微软雅黑";
+}
+
+.item-box {
+  /* outline: 1px solid red; */
+  border-bottom: 2px solid #ccc;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 50rpx;
+}
+
+.item-box-sz {
+  /* outline: 1px solid red; *//* border-bottom: 2px solid #ccc; */
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 50rpx 50rpx; */
+  margin-top: 100rpx;
+}
+
+.item-box>text {
+  font-size: 36rpx;
+}
+
+.item-box-button {
+  /* outline: 1px solid blue; */
+  background-color: #80f9e7;
+  height: 100rpx;
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-box-button>text {
+  color: #fff;
+  font-size: 42rpx;
+}
+
+.btn-sq {
+  width: 250rpx;
+}
+
+.icon-box {
+  /* outline: 1px solid red; */
+  margin-top: 20rpx;
+  display: flex;
+  width: 400rpx;
+  justify-content: space-between;
+}
+
+.iconfont {
+  margin-top: 8rpx;
+}
+
+.icon-yingan {
+  color: #00c6fb;
+}
+
+.icon-yinfu {
+  color: #f1e172;
+}
+
+.zxpp-txt {
+  position: absolute;
+  color: #fff;
+  bottom: 0rpx;
+  left: 10rpx;
+  font-size: 30rpx;
+}
+=======
+/* pages/home/home.wxss */
+
+.con {
+  /* outline: 1px solid red; */
+}
+
+.top-box {
+  /* outline: 1px solid green; *//* height: 500rpx; */
+  width: calc(100%);
+  height: 40%;
+  /* background-color: rgba(92, 66, 187, 0.911); *//* background-image: url(http://yinyuan.ifree258.top/topbg750.png);
+  background-repeat: no-repeat;
+  background-size:contain; */
+  display: flex;
+  /* justify-content: center; */
+}
+
+.top-box>image {
+  width: 100%;
+  height: 40%;
+  position: fixed;
+  z-index: -1;
+}
+
+.info-box {
+  /* outline: 1px solid red; *//* width: 200rpx; */
+  width: 100%;
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-box {
+  border: 3rpx solid #fff;
+  border-radius: 50%;
+  width: 130rpx;
+  height: 130rpx;
+  padding: 5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userinfo-avatar {
+  /* border: 2px solid #fff; */
+  width: 100%;
+  height: 100%;
+  /* padding: 10rpx; */
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  margin-top: 10rpx;
+  font-size: 36rpx;
+  /* font-family: Microsoft YaHei; */
+}
+
+.yg-box {
+  /* outline: 1px solid blue; *//* margin-top: 20rpx; */
+  display: flex;
+  align-items: center;
+}
+
+.yg-txt {
+  color: #fff;
+}
+
+.bottom-box {
+  /* outline: 1px solid blue; */
+  height: 60%;
+  /* background-color: rgba(236, 234, 245, 0.945); */
+  display: flex;
+}
+
+.left-box {
+  /* outline: 1px solid pink;
+  background-color: pink; */
+  width: 50%;
+  margin: 0 20rpx 0 40rpx;
+}
+
+.l1 {
+  /* outline: 1px solid red; */
+  width: 100%;
+  /* height: 350rpx; *//* 用vh解决全面屏适应问题 */
+  height: 25vh;
+  /* background-color: rgb(245, 151, 43); */
+  border-radius: 20rpx;
+  /* margin-top: 40rpx; */
+}
+
+.l1>image {
+  width: 100%;
+  height: 100%;
+}
+
+.l2 {
+  /* outline: 1px solid red; *//* height: 200rpx; */
+  height: 15vh;
+  /* background-color: rgb(147, 43, 245); */
+  border-radius: 20rpx;
+  margin-top: 40rpx;
+}
+
+.l2>image {
+  width: 100%;
+  height: 100%;
+}
+
+.l3 {
+  /* outline: 1px solid red; *//* height: 200rpx; */
+  height: 14vh;
+  /* background-color: rgb(43, 131, 245); *//* background-image: url(http://yinyuan.ifree258.top/ygyq.png);
+  background-repeat: no-repeat;
+  background-size:contain; */
+  border-radius: 20rpx;
+  /* margin-top: 40rpx; */
+  margin-top: 30rpx;
+  position: relative;
+}
+
+.l3>image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+}
+
+.right-box {
+  /* outline: 1px solid purple;
+  background-color: purple; */
+  width: 50%;
+  margin: 0 40rpx 0 20rpx;
+}
+
+.item {
+  /* outline: 1px solid red; *//* width: 100%; *//* height: 300rpx; *//* height: 22vh; */
+  border-radius: 20rpx;
+  position: relative;
+  /* margin-top: 40rpx; */
+  box-shadow: 7rpx 7rpx 30rpx rgba(0, 0, 0, 0.5);
+}
+
+.item>image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* left: 10rpx;
+  top: 10rpx; */
+}
+
+/* 水滴效果 */
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* Main Content */
+
+.main {
+  max-width: 69em;
+  min-height: 15em;
+}
+
+.drop {
+  /* border: 1px solid rgb(236, 30, 30); *//* border-top: 1px solid rgb(255, 255, 255); */
+  border-radius: 20rpx;
+  /* box-shadow: inset -0.1em 0 2em 0.5em rgba(255, 255, 255, 0.5), inset -0.1em 0 0.5em 0 rgba(0, 0, 0, 0.8); *//* position: relative; */
+  position: absolute;
+  /* margin: 0 auto; *//* width: 15em;
+  height: 15em; */
+  width: 60rpx;
+  height: 120rpx;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  /* transform: rotateX(70deg);  *//* transform: rotateX(50deg);  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 200rpx; */
+  right: 20rpx;
+  bottom: 0rpx;
+}
+
+.drop-txt {
+  /* outline: 1px solid red; *//* color: #fff; */
+  font-size: 20rpx;
+  /* position: absolute; *//* left: 42%; *//* bottom: 50%; */
+}
+
+.dropping {
+  background: rgba(167, 217, 234, 1);
+  border-radius: 100%;
+  /* box-shadow: h-shadow v-shadow blur spread color inset; *//* box-shadow: 0 0 0 0.1em rgba(167, 217, 234, 0.8),
+                0 0 0 0.15em rgba(167, 217, 234, 0.8),
+                0 0 0 0.2em rgba(167, 227, 234, 0.8),
+                0 0 0 0.25em rgba(167, 227, 234, 0.8),
+                0 0 0 0.3em rgba(167, 227, 234, 0.8),
+                0 0 0 0.35em rgba(167, 227, 234, 0.8),
+                0 0 0 0.4em rgba(167, 227, 234, 0.8),
+                0 0 0 0.45em rgba(167, 227, 234, 0.8),
+                0 0 0 0.5em rgba(167, 227, 234, 0.8); */
+  box-shadow: 0 0 0 0.025em rgba(167, 217, 234, 0.8),
+                0 0 0 0.03em rgba(167, 217, 234, 0.8),
+                0 0 0 0.05em rgba(167, 227, 234, 0.8),
+                0 0 0 0.06em rgba(167, 227, 234, 0.8),
+                0 0 0 0.07em rgba(167, 227, 234, 0.8),
+                0 0 0 0.08em rgba(167, 227, 234, 0.8),
+                0 0 0 0.1em rgba(167, 227, 234, 0.8),
+                0 0 0 0.11em rgba(167, 227, 234, 0.8),
+                0 0 0 0.12em rgba(167, 227, 234, 0.8);
+  top: 0%;
+  left: 50%;
+  width: 0.025em;
+  height: 0.025em;
+  /* width: 0.5rpx;
+  height: 0.5rpx; */
+  animation: fall 3.5s cubic-bezier(0.5, 0, 1, 0.5) infinite;
+  display: block;
+  position: absolute;
+}
+
+/* 此处height控制动画后水的高度 */
+
+.drop-after {
+  background: rgb(52, 152, 219);
+  background: linear-gradient(rgba(52, 255, 255, 1) 0%, rgba(52, 152, 219, 1) 10%, rgba(152, 252, 219, 1) 100%);
+  /* border-radius: 100% 0 50% 0; */
+  left: 0;
+  bottom: 0;
+  width: inherit;
+  height: 3em;
+  opacity: 0.7;
+  /* animation: surface 3s linear infinite; *//* width: 15em; */
+  display: block;
+  position: absolute;
+}
+
+@keyframes fall {
+  /* box-shadow: h-shadow v-shadow blur spread color inset; */
+
+  5%, 15% {
+    /* box-shadow: 0 -1.4em 0 0.1em rgba(167, 217, 234, 1),
+                    0 -0.8em 0 0.15em rgba(167, 217, 234, 1),
+                    0 -0.3em 0 0.2em rgba(167, 217, 234, 1),
+                    0 -0.1em 0 0.25em rgba(167, 217, 234, 1),
+                    0 0 0 0.3em rgba(167, 217, 234, 1),
+                    0 0.2em 0 0.35em rgba(167, 217, 234, 1),
+                    0 0.4em 0 0.4em rgba(167, 217, 234, 1),
+                    0 0.6em 0 0.45em rgba(167, 217, 234, 1),
+                    0 0.8em 0 0.5em rgba(167, 217, 234, 1); */
+    box-shadow: 0 -1.4em 0 0.025em rgba(167, 217, 234, 1),
+                    0 -0.8em 0 0.04em rgba(167, 217, 234, 1),
+                    0 -0.3em 0 0.05em rgba(167, 217, 234, 1),
+                    0 -0.1em 0 0.06em rgba(167, 217, 234, 1),
+                    0 0 0 0.07em rgba(167, 217, 234, 1),
+                    0 0.2em 0 0.08em rgba(167, 217, 234, 1),
+                    0 0.4em 0 0.1em rgba(167, 217, 234, 1),
+                    0 0.6em 0 0.11em rgba(167, 217, 234, 1),
+                    0 0.8em 0 0.12em rgba(167, 217, 234, 1);
+  }
+
+  16% {
+    /* top: 80%; */
+    top: 100%;
+  }
+
+  18% {
+    /* top: 80%; */
+    top: 100%;
+    /* box-shadow: 1em -8em 0 0.2em rgba(177, 227, 234, 1),
+                    -2.2em -3.8em 0 0.1em rgba(177, 227, 234, 1),
+                    3em -2.85em 0 0.3em rgba(177, 227, 234, 1),
+                    -3.5em -4em 0 0.2em rgba(177, 227, 234, 1),
+                    0 0 0 0.3em rgba(177, 227, 234, 1),
+                    2em -2em 0 0.2em rgba(177, 227, 234, 1),
+                    -0.3em -3em 0 0.2em rgba(177, 227, 234, 1),
+                    0.5em -5em 0 0.35em rgba(177, 227, 234, 1),
+                    -3em -1em 0 0.3em rgba(177, 227, 234, 1); */
+    box-shadow: 1em -8em 0 0.05em rgba(177, 227, 234, 1),
+                    -2.2em -3.8em 0 0.025em rgba(177, 227, 234, 1),
+                    3em -2.85em 0 0.07em rgba(177, 227, 234, 1),
+                    -3.5em -4em 0 0.05em rgba(177, 227, 234, 1),
+                    0 0 0 0.07em rgba(177, 227, 234, 1),
+                    2em -2em 0 0.05em rgba(177, 227, 234, 1),
+                    -0.3em -3em 0 0.05em rgba(177, 227, 234, 1),
+                    0.5em -5em 0 0.08em rgba(177, 227, 234, 1),
+                    -3em -1em 0 0.07em rgba(177, 227, 234, 1);
+  }
+
+  30% {
+    /* top: 90%; */
+    top: 95%;
+    /* box-shadow: 1.5em 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.15em rgba(252, 252, 255, 0.1),
+                    3em 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.25em rgba(252, 252, 255, 0.1),
+                    0 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    2.35em 0 0 0.3em rgba(252, 252, 255, 0.1),
+                    -0.5em 0 0 0.2em rgba(252, 252, 255, 0.1),
+                    1em 0 0 0.3em rgba(252, 252, 255, 0.1),
+                    -4em 0 0 0.4em rgba(252, 252, 255, 0.1); */
+    box-shadow: 1.5em 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.03em rgba(252, 252, 255, 0.1),
+                    3em 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    -2em 0 0 0.06em rgba(252, 252, 255, 0.1),
+                    0 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    2.35em 0 0 0.07em rgba(252, 252, 255, 0.1),
+                    -0.5em 0 0 0.05em rgba(252, 252, 255, 0.1),
+                    1em 0 0 0.07em rgba(252, 252, 255, 0.1),
+                    -4em 0 0 0.1em rgba(252, 252, 255, 0.1);
+  }
+
+  40%, 100% {
+    /* top: 95%; */
+    top: 100%;
+    background: rgba(255, 255, 255, 1);
+    /* box-shadow: 1.8em 0.5em 0 0.2em rgba(255, 255, 255, 0),
+                    -3em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    4em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    -3.5em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    0 0 0 0.3em rgba(255, 255, 215, 0),
+                    2.45em 0.5em 0 0.1em rgba(255, 255, 255, 0),
+                    -0.8em 0.5em 0 0.2em rgba(255, 255, 255, 0),
+                    1.5em 0.5em 0 0.3em rgba(255, 255, 255, 0),
+                    -4.5em 0.5em 0 0.2em rgba(255, 255, 255, 0); */
+    box-shadow: 1.8em 0.5em 0 0.05em rgba(255, 255, 255, 0),
+                    -3em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    4em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    -3.5em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    0 0 0 0.07em rgba(255, 255, 215, 0),
+                    2.45em 0.5em 0 0.025em rgba(255, 255, 255, 0),
+                    -0.8em 0.5em 0 0.05em rgba(255, 255, 255, 0),
+                    1.5em 0.5em 0 0.07em rgba(255, 255, 255, 0),
+                    -4.5em 0.5em 0 0.05em rgba(255, 255, 255, 0);
+  }
+}
+
+.drop-bg {
+  /* outline: 1px solid red; */
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.countDown {
+  /* outline: 1px solid blue; */
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  z-index: 1;
+}
+
+.count-txt {
+  /* color: #fff; */
+  font-size: 22rpx;
+}
+
+/* 模态框 */
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-photo {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 9999;
+  margin: -100rpx -90rpx;
+}
+
+.modal-photo-sz {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  z-index: 9999;
+  margin: -100rpx -100rpx;
+}
+
+.top-img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.modal-content {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  z-index: 9500;
+  width: 600rpx;
+  height: 45%;
+  overflow: hidden;
+  padding: 120rpx 0;
+  background: #fff;
+  margin: 0rpx -300rpx;
+  border-radius: 20rpx;
+}
+
+.modal-content-sz {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  z-index: 9500;
+  width: 500rpx;
+  height: 35%;
+  overflow: hidden;
+  padding: 120rpx 0;
+  background: #fff;
+  margin: 0rpx -250rpx;
+  border-radius: 20rpx;
+}
+
+.modal-title {
+  /* outline: 1px solid skyblue; */
+  height: 100rpx;
+  width: 100%;
+  background-color: #00b7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title-sz {
+  /* outline: 1px solid skyblue; */
+  height: 100rpx;
+  width: 100%;
+  background-color: #87ceeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-title-txt {
+  color: #fff;
+  font-size: 48rpx;
+  font-family: "微软雅黑";
+}
+
+.item-box {
+  /* outline: 1px solid red; */
+  border-bottom: 2px solid #ccc;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 50rpx;
+}
+
+.item-box-sz {
+  /* outline: 1px solid red; *//* border-bottom: 2px solid #ccc; */
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 50rpx 50rpx; */
+  margin-top: 100rpx;
+}
+
+.item-box>text {
+  font-size: 36rpx;
+}
+
+.item-box-button {
+  /* outline: 1px solid blue; */
+  background-color: #80f9e7;
+  height: 100rpx;
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-box-button>text {
+  color: #fff;
+  font-size: 42rpx;
+}
+
+.btn-sq {
+  width: 250rpx;
+}
+
+.icon-box {
+  /* outline: 1px solid red; */
+  margin-top: 20rpx;
+  display: flex;
+  width: 400rpx;
+  justify-content: space-between;
+}
+
+.iconfont {
+  margin-top: 8rpx;
+}
+
+.icon-yingan {
+  color: #00c6fb;
+}
+
+.icon-yinfu {
+  color: #f1e172;
+}
+
+.zxpp-txt {
+  position: absolute;
+  color: #fff;
+  bottom: 0rpx;
+  left: 10rpx;
+  font-size: 30rpx;
+}
+>>>>>>> renew
+>>>>>>> 2019/12/9

@@ -1,0 +1,355 @@
+<<<<<<< HEAD
+/* pages/xzyy/ckpp/ckpp.wxss */
+page{
+  height: 0;
+}
+.con{
+  /* border: 1px solid red; */
+  padding: 0rpx 20rpx;
+  height: 100%;
+  position: relative;
+  color: #fff;
+}
+
+.tabTit {
+  /* position: fixed; */
+  /* top: 0rpx; */
+  left: 0;
+  z-index: 99;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  text-align: center;
+  display: flex;
+}
+.tabTit .active {
+  color: #e64340;
+  background: #fff;
+}
+.tabTit .active image {
+  transform: rotate(180deg);
+  background: none;
+}
+.tabTit image {
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+}
+.flex1 {
+  flex: 1;
+  overflow: hidden;
+  display: block;
+}
+.scr { 
+  /* height: 100%; 需要根据页面情况设置 margin-top */
+  /* margin-top: 90rpx; */
+}
+
+.tr {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  width: 100%;
+  /* justify-content: center; */
+  height: 80rpx;
+  align-items: center;
+  padding-left: 20rpx;
+}
+
+.td-img {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  /* border: 1px solid rgba(204, 204, 204, 0.5); */
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 需要根据页面情况调整td宽度比例 */
+.td-1 {
+  width: 50%;
+  /* text-align: center; */
+  padding-left: 10rpx;
+}
+
+.td-2 {
+  width: 40%;
+  height: 48rpx;
+  /* justify-content: center; */
+  /* text-align: center; */
+  /* flex: 1; */
+  position: relative;
+  /* margin-left: 150rpx; */
+}
+.td-2-off{
+  justify-content: center;
+  /* text-align: center;
+  flex: 1; */
+  position: absolute;
+  z-index: 1;
+}
+.td-2-on{
+  justify-content: center;
+  /* text-align: center;
+  flex: 1; */
+  position: absolute;
+  z-index: 3;
+}
+.ppzs-img{
+  /* outline: 1px solid red; */
+  width: 50rpx;
+  height: 50rpx;
+  /* position: absolute;
+  z-index: -3; */
+}
+.ppzs1-img{
+  /* outline: 1px solid blue; */
+  width: 50rpx;
+  height: 50rpx;
+  /* position: absolute;
+  z-index: 3; */
+=======
+<<<<<<< HEAD
+/* pages/xzyy/ckpp/ckpp.wxss */
+page{
+  height: 0;
+}
+.con{
+  /* border: 1px solid red; */
+  padding: 0rpx 20rpx;
+  height: 100%;
+  position: relative;
+  color: #fff;
+}
+
+.tabTit {
+  /* position: fixed; */
+  /* top: 0rpx; */
+  left: 0;
+  z-index: 99;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  text-align: center;
+  display: flex;
+}
+.tabTit .active {
+  color: #e64340;
+  background: #fff;
+}
+.tabTit .active image {
+  transform: rotate(180deg);
+  background: none;
+}
+.tabTit image {
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+}
+.flex1 {
+  flex: 1;
+  overflow: hidden;
+  display: block;
+}
+.scr { 
+  /* height: 100%; 需要根据页面情况设置 margin-top */
+  /* margin-top: 90rpx; */
+}
+
+.tr {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  width: 100%;
+  /* justify-content: center; */
+  height: 80rpx;
+  align-items: center;
+  padding-left: 20rpx;
+}
+
+.td-img {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  /* border: 1px solid rgba(204, 204, 204, 0.5); */
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 需要根据页面情况调整td宽度比例 */
+.td-1 {
+  width: 50%;
+  /* text-align: center; */
+  padding-left: 10rpx;
+}
+
+.td-2 {
+  width: 40%;
+  height: 48rpx;
+  /* justify-content: center; */
+  /* text-align: center; */
+  /* flex: 1; */
+  position: relative;
+  /* margin-left: 150rpx; */
+}
+.td-2-off{
+  justify-content: center;
+  /* text-align: center;
+  flex: 1; */
+  position: absolute;
+  z-index: 1;
+}
+.td-2-on{
+  justify-content: center;
+  /* text-align: center;
+  flex: 1; */
+  position: absolute;
+  z-index: 3;
+}
+.ppzs-img{
+  /* outline: 1px solid red; */
+  width: 50rpx;
+  height: 50rpx;
+  /* position: absolute;
+  z-index: -3; */
+}
+.ppzs1-img{
+  /* outline: 1px solid blue; */
+  width: 50rpx;
+  height: 50rpx;
+  /* position: absolute;
+  z-index: 3; */
+=======
+/* pages/xzyy/ckpp/ckpp.wxss */
+page{
+  height: 0;
+}
+.con{
+  /* border: 1px solid red; */
+  padding: 0rpx 20rpx;
+  height: 100%;
+  position: relative;
+  color: #fff;
+}
+
+.tabTit {
+  /* position: fixed; */
+  /* top: 0rpx; */
+  left: 0;
+  z-index: 99;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  text-align: center;
+  display: flex;
+}
+.tabTit .active {
+  color: #e64340;
+  background: #fff;
+}
+.tabTit .active image {
+  transform: rotate(180deg);
+  background: none;
+}
+.tabTit image {
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+}
+.flex1 {
+  flex: 1;
+  overflow: hidden;
+  display: block;
+}
+.scr { 
+  /* height: 100%; 需要根据页面情况设置 margin-top */
+  /* margin-top: 90rpx; */
+}
+
+.tr {
+  border-bottom: 1px solid #eee;
+  display: flex;
+  width: 100%;
+  /* justify-content: center; */
+  height: 80rpx;
+  align-items: center;
+  padding-left: 20rpx;
+}
+
+.td-img {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  /* border: 1px solid rgba(204, 204, 204, 0.5); */
+  width: 60rpx;
+  height: 60rpx;
+}
+
+/* 需要根据页面情况调整td宽度比例 */
+.td-1 {
+  width: 50%;
+  /* text-align: center; */
+  padding-left: 10rpx;
+}
+
+.td-2 {
+  width: 40%;
+  height: 48rpx;
+  /* justify-content: center; */
+  /* text-align: center; */
+  /* flex: 1; */
+  position: relative;
+  /* margin-left: 150rpx; */
+}
+.td-2-off{
+  justify-content: center;
+  /* text-align: center;
+  flex: 1; */
+  position: absolute;
+  z-index: 1;
+}
+.td-2-on{
+  justify-content: center;
+  /* text-align: center;
+  flex: 1; */
+  position: absolute;
+  z-index: 3;
+}
+.ppzs-img{
+  /* outline: 1px solid red; */
+  width: 50rpx;
+  height: 50rpx;
+  /* position: absolute;
+  z-index: -3; */
+}
+.ppzs1-img{
+  /* outline: 1px solid blue; */
+  width: 50rpx;
+  height: 50rpx;
+  /* position: absolute;
+  z-index: 3; */
+>>>>>>> renew
+>>>>>>> 2019/12/9
+}

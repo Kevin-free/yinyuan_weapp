@@ -1,0 +1,71 @@
+<!--pages/phb/phb.wxml-->
+<!-- 引入自定义组件。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<image class='bottombg' src='http://yinyuan.ifree258.top/bghd.jpg'></image>
+
+<view class='con' style='margin-top: {{topHeight}}px; height: {{bHeight}}px'>
+  <view class='top-box'>
+    <!-- 第二名 -->
+    <view class='top-item'>
+      <view class='top2-box'>
+        <view class='top-txt-box'>
+          <text>2</text>
+        </view>
+        <view class='top2-ava'>
+          <image class='ava-img' src="{{top3Lists[1].avatarUrl}}"></image>
+        </view>
+        <image class='hz2' src='/assets/images/hz2.png' mode='aspectFit'>
+        </image>
+        <text class='top-zyyzs'>{{top3Lists[1].zyyzs}}</text>
+        <view class='yinfubox iconfont icon-yinfu'></view>
+      </view>
+      <text class='nickname'>{{top3Lists[1].nickName}}</text>
+    </view>
+    <!-- 第一名 -->
+    <view class='top-item'>
+      <view class='top1-box'>
+        <view class='top-txt-box' style='left:-10rpx;'>
+          <text>1</text>
+        </view>
+        <view class='top1-ava'>
+          <image class='ava-img' src='{{top3Lists[0].avatarUrl}}'></image>
+        </view>
+        <image class='hz1' src='/assets/images/hz1.png' mode='aspectFit'></image>
+        <text class='top-zyyzs'>{{top3Lists[0].zyyzs}}</text>
+        <view class='yinfubox iconfont icon-yinfu'></view>
+      </view>
+      <text class='nickname' style='bottom:120rpx;'>{{top3Lists[0].nickName}}</text>
+    </view>
+    <!-- 第三名 -->
+    <view class='top-item'>
+      <view class='top2-box'>
+        <view class='top-txt-box'>
+          <text>3</text>
+        </view>
+        <view class='top3-ava'>
+          <image class='ava-img' src='{{top3Lists[2].avatarUrl}}'></image>
+        </view>
+        <image class='hz2' src='/assets/images/hz3.png' mode='aspectFit'></image>
+        <text class='top-zyyzs'>{{top3Lists[2].zyyzs}}</text>
+        <view class='yinfubox iconfont icon-yinfu'></view>
+      </view>
+      <text class='nickname'>{{top3Lists[2].nickName}}</text>
+    </view>
+  </view>
+  <!-- 剩余排行榜列表 -->
+  <view class='src-box'>
+    <scroll-view class="top-list" scroll-y="true">
+      <block wx:for="{{topLists}}" wx:key="{{index}}">
+        <view class='list'>
+          <!-- 剩余的排行榜从第4名开始显示 -->
+          <text>{{index+4}}</text>
+          <image class='list-ava' src="{{item.avatarUrl}}"></image>
+          <text>{{item.nickName}}</text>
+          <view class='list-yinfu iconfont icon-yinfu'></view>
+          <text class='zyyzs'>{{item.zyyzs}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

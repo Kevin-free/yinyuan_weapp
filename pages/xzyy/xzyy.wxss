@@ -1,0 +1,1399 @@
+<<<<<<< HEAD
+/* pages/xzyy/xzyy2.wxss */
+page{
+  height: 0;
+}
+
+.con{
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.rowCenter {
+  /* outline: 1px solid green; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh 20rpx;
+  padding-top: 0rpx;
+  /* background: #444a4a; */
+  color: #fff;
+  /* opacity: 0.2; */
+}
+
+.voice {
+  width: auto;
+  margin-top: 0;
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* background: #444a4a; */
+  /* box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); */
+  box-shadow: 0rpx 10rpx 30rpx 10rpx rgba(0, 0, 0, 0.05);
+  border-radius: 10rpx;
+}
+
+/* 歌信息及按钮区 */
+.head {
+  width: 100%;
+  /* height: 100rpx; */
+  display: flex;
+  /* flex-direction: row; */
+  font-size: 24rpx;
+  color: #fff;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/*  */
+.musicInfo {
+  /* outline: 1px solid green; */
+  width: 60%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.rollCon {
+  /* outline: 1px solid red; */
+  /* position: relative; */
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 60rpx;
+  /* z-index: 100; */
+  /* background: #fde8c7; */
+  font-size: 20rpx;
+  /* line-height: 60rpx; */
+}
+
+.song-box {
+  /* outline: 1px solid green; */
+  width: 100%;
+  position: relative;
+}
+
+.txt-mName {
+  /* outline: 1px solid blue; */
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.txt-mAuthor {
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.btn-box{
+  /* outline: 1px solid red; */
+  width: 40%;
+  display: flex;
+  height: 80rpx;
+  /* position: relative; */
+}
+.btn-volum{
+  /* outline: 1px solid green; */
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 165rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-volum{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.btn-play {
+  /* outline: 1px solid red; */
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-play {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.btn-like {
+  /* outline: 1px solid blue; */
+  position: absolute;
+  right: -5rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.img-like {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 播放进度条区 */
+.playing-status {
+  display: flex;
+  color: #fff;
+  margin-top: 20rpx;
+  /* margin: 20rpx 0; */
+}
+
+.progress {
+  /* width: 100%;
+  border-radius: 4px;
+  color: #000;
+  margin-bottom: 20rpx; */
+  width: 540rpx;
+  margin: 0 auto;
+  color: #000;
+  position: relative;
+  border-radius: 50rpx;
+}
+
+.time {
+  width: 70rpx;
+  text-align: center;
+  display: block;
+  font-size: 24rpx;
+}
+
+/*播放器页*/
+
+.box {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+#playingpage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.blurbg {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
+  background-repeat: no-repeat;
+  transform: scale(1.2);
+}
+
+.gifbg {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+#playingpage .playing-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+#playingpage .playing-wrap .contents {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nowPlayingTitle {
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.nowPlayingArtist {
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+#playing-main {
+  /* animation-delay: 0.5s;
+  animation: circle 25s linear infinite;
+  animation-play-state: paused;
+  padding: 30rpx 0; */
+}
+
+#pmaincover {
+  width: 100%;
+  height: 100%;
+  left: 104rpx;
+  top: 104rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.playing #playing-main {
+  /* animation-play-state: running !important; */
+}
+
+.playing #playing-zz image {
+  transform: rotate(-0deg);
+}
+
+/*  */
+
+#playingpage .playing-wrap .actions {
+  /* padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  height: 400rpx;
+  overflow: hidden;
+  /* width: 100%; */
+  width: calc(100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weui-grids {
+  /* outline: 1px solid red; */
+  overflow: hidden;
+  width: 100%;
+  /* margin-top: 50rpx; */
+}
+
+.loading-box{
+  /* outline: 1px solid blue; */
+  width: 100%;
+  height: 420rpx;
+  /* height: 210px; */
+}
+
+.btn-area {
+  /* border: 1px solid #e9e9e9; */  
+  background-color: rgba(255, 255, 255, 0.05);
+  /* background-color: #7284ea; */
+  width: 200rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); */
+}
+
+.btn-txt {
+  color: #fff;
+  font-size: 30rpx;
+}
+
+#cd-box {
+  /* outline: 1px solid blue; */
+  position: relative;
+  /* padding: 20rpx 0; */
+  padding: 2vh 0;
+  /* top: -20vh; *//* top: -120px; *//* margin-top: 80px; */
+}
+
+.level_1 {
+  /* outline: 1px solid green; */
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 auto;
+  position: relative;
+  /* top: 150rpx; */
+  top: 0;
+  border-radius: 50%;
+  /* 去掉此属性解决轻微直边问题 */
+  padding: 1rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 520rpx;
+  height: 520rpx;
+  animation: mymove 25s linear infinite;
+  animation-delay: 1s;
+  animation-play-state: paused;
+}
+
+.playing .level_1 {
+  animation-delay: 1s;
+  animation-play-state: running !important;
+}
+
+@keyframes mymove {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cd {
+  width: 100%;
+  height: 100%;
+  /* position: fixed; */
+  position: relative;
+  z-index: 2;
+}
+
+.cover {
+  width: 96%;
+  height: 96%;
+  /* width: 100%;
+  height: 100%; */
+  border-radius: 100%;
+  /* position: fixed; */
+  position: absolute;
+  z-index: 3;
+  padding-top: 0;
+}
+
+/* 感受区 */
+.weui-grids {
+  /* outline: 1px solid purple; */
+  overflow: hidden;
+  width: 100%;
+}
+
+.weui-grid {
+  /* border: 1px solid red; */
+  position: relative;
+  float: left;
+  /* padding: 10px; */
+  padding: 2vh 20rpx;
+  width: 33.33333333%;
+  box-sizing: border-box;
+  height: 33.333333%;
+}
+
+.btn-area {
+  /* border: 1px solid #e9e9e9; */  
+  background-color: rgba(255, 255, 255, 0.05);
+  /* background-color: #7284ea; */
+  width: 200rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); */
+  padding: 0;
+}
+
+.btn-txt {
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.modal-content {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  z-index: 9500;
+  width: 600rpx;
+  height: 45%;
+  overflow: hidden;
+  /* padding: 120rpx 0; */
+  /* background: #fff; */
+  margin: 0rpx -300rpx;
+  border-radius: 20rpx;
+}
+.modal-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.modal-txt{
+  position: absolute;
+  z-index: 2;
+  top: 120rpx;
+  left: 250rpx;
+}
+.modal-txt-intr{
+  position: absolute;
+  z-index: 2;
+  top: 200rpx;
+  left: 50rpx;
+}
+.modal-button{
+  background-color: rgb(34, 196, 34);
+  border-radius: 20rpx;
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  z-index: 9500;
+  padding: 20rpx;
+  color: #fff;
+=======
+<<<<<<< HEAD
+/* pages/xzyy/xzyy2.wxss */
+page{
+  height: 0;
+}
+
+.con{
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.rowCenter {
+  /* outline: 1px solid green; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh 20rpx;
+  padding-top: 0rpx;
+  /* background: #444a4a; */
+  color: #fff;
+  /* opacity: 0.2; */
+}
+
+.voice {
+  width: auto;
+  margin-top: 0;
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* background: #444a4a; */
+  /* box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); */
+  box-shadow: 0rpx 10rpx 30rpx 10rpx rgba(0, 0, 0, 0.05);
+  border-radius: 10rpx;
+}
+
+/* 歌信息及按钮区 */
+.head {
+  width: 100%;
+  /* height: 100rpx; */
+  display: flex;
+  /* flex-direction: row; */
+  font-size: 24rpx;
+  color: #fff;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/*  */
+.musicInfo {
+  /* outline: 1px solid green; */
+  width: 60%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.rollCon {
+  /* outline: 1px solid red; */
+  /* position: relative; */
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 60rpx;
+  /* z-index: 100; */
+  /* background: #fde8c7; */
+  font-size: 20rpx;
+  /* line-height: 60rpx; */
+}
+
+.song-box {
+  /* outline: 1px solid green; */
+  width: 100%;
+  position: relative;
+}
+
+.txt-mName {
+  /* outline: 1px solid blue; */
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.txt-mAuthor {
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.btn-box{
+  /* outline: 1px solid red; */
+  width: 40%;
+  display: flex;
+  height: 80rpx;
+  /* position: relative; */
+}
+.btn-volum{
+  /* outline: 1px solid green; */
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 165rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-volum{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.btn-play {
+  /* outline: 1px solid red; */
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-play {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.btn-like {
+  /* outline: 1px solid blue; */
+  position: absolute;
+  right: -5rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.img-like {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 播放进度条区 */
+.playing-status {
+  display: flex;
+  color: #fff;
+  margin-top: 20rpx;
+  /* margin: 20rpx 0; */
+}
+
+.progress {
+  /* width: 100%;
+  border-radius: 4px;
+  color: #000;
+  margin-bottom: 20rpx; */
+  width: 540rpx;
+  margin: 0 auto;
+  color: #000;
+  position: relative;
+  border-radius: 50rpx;
+}
+
+.time {
+  width: 70rpx;
+  text-align: center;
+  display: block;
+  font-size: 24rpx;
+}
+
+/*播放器页*/
+
+.box {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+#playingpage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.blurbg {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
+  background-repeat: no-repeat;
+  transform: scale(1.2);
+}
+
+.gifbg {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+#playingpage .playing-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+#playingpage .playing-wrap .contents {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nowPlayingTitle {
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.nowPlayingArtist {
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+#playing-main {
+  /* animation-delay: 0.5s;
+  animation: circle 25s linear infinite;
+  animation-play-state: paused;
+  padding: 30rpx 0; */
+}
+
+#pmaincover {
+  width: 100%;
+  height: 100%;
+  left: 104rpx;
+  top: 104rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.playing #playing-main {
+  /* animation-play-state: running !important; */
+}
+
+.playing #playing-zz image {
+  transform: rotate(-0deg);
+}
+
+/*  */
+
+#playingpage .playing-wrap .actions {
+  /* padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  height: 400rpx;
+  overflow: hidden;
+  /* width: 100%; */
+  width: calc(100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weui-grids {
+  /* outline: 1px solid red; */
+  overflow: hidden;
+  width: 100%;
+  /* margin-top: 50rpx; */
+}
+
+.loading-box{
+  /* outline: 1px solid blue; */
+  width: 100%;
+  height: 420rpx;
+  /* height: 210px; */
+}
+
+.btn-area {
+  /* border: 1px solid #e9e9e9; */  
+  background-color: rgba(255, 255, 255, 0.05);
+  /* background-color: #7284ea; */
+  width: 200rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); */
+}
+
+.btn-txt {
+  color: #fff;
+  font-size: 30rpx;
+}
+
+#cd-box {
+  /* outline: 1px solid blue; */
+  position: relative;
+  /* padding: 20rpx 0; */
+  padding: 2vh 0;
+  /* top: -20vh; *//* top: -120px; *//* margin-top: 80px; */
+}
+
+.level_1 {
+  /* outline: 1px solid green; */
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 auto;
+  position: relative;
+  /* top: 150rpx; */
+  top: 0;
+  border-radius: 50%;
+  /* 去掉此属性解决轻微直边问题 */
+  padding: 1rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 520rpx;
+  height: 520rpx;
+  animation: mymove 25s linear infinite;
+  animation-delay: 1s;
+  animation-play-state: paused;
+}
+
+.playing .level_1 {
+  animation-delay: 1s;
+  animation-play-state: running !important;
+}
+
+@keyframes mymove {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cd {
+  width: 100%;
+  height: 100%;
+  /* position: fixed; */
+  position: relative;
+  z-index: 2;
+}
+
+.cover {
+  width: 96%;
+  height: 96%;
+  /* width: 100%;
+  height: 100%; */
+  border-radius: 100%;
+  /* position: fixed; */
+  position: absolute;
+  z-index: 3;
+  padding-top: 0;
+}
+
+/* 感受区 */
+.weui-grids {
+  /* outline: 1px solid purple; */
+  overflow: hidden;
+  width: 100%;
+}
+
+.weui-grid {
+  /* border: 1px solid red; */
+  position: relative;
+  float: left;
+  /* padding: 10px; */
+  padding: 2vh 20rpx;
+  width: 33.33333333%;
+  box-sizing: border-box;
+  height: 33.333333%;
+}
+
+.btn-area {
+  /* border: 1px solid #e9e9e9; */  
+  background-color: rgba(255, 255, 255, 0.05);
+  /* background-color: #7284ea; */
+  width: 200rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); */
+  padding: 0;
+}
+
+.btn-txt {
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.modal-content {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  z-index: 9500;
+  width: 600rpx;
+  height: 45%;
+  overflow: hidden;
+  /* padding: 120rpx 0; */
+  /* background: #fff; */
+  margin: 0rpx -300rpx;
+  border-radius: 20rpx;
+}
+.modal-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.modal-txt{
+  position: absolute;
+  z-index: 2;
+  top: 120rpx;
+  left: 250rpx;
+}
+.modal-txt-intr{
+  position: absolute;
+  z-index: 2;
+  top: 200rpx;
+  left: 50rpx;
+}
+.modal-button{
+  background-color: rgb(34, 196, 34);
+  border-radius: 20rpx;
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  z-index: 9500;
+  padding: 20rpx;
+  color: #fff;
+=======
+/* pages/xzyy/xzyy2.wxss */
+page{
+  height: 0;
+}
+
+.con{
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.rowCenter {
+  /* outline: 1px solid green; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh 20rpx;
+  padding-top: 0rpx;
+  /* background: #444a4a; */
+  color: #fff;
+  /* opacity: 0.2; */
+}
+
+.voice {
+  width: auto;
+  margin-top: 0;
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  /* background: #444a4a; */
+  /* box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); */
+  box-shadow: 0rpx 10rpx 30rpx 10rpx rgba(0, 0, 0, 0.05);
+  border-radius: 10rpx;
+}
+
+/* 歌信息及按钮区 */
+.head {
+  width: 100%;
+  /* height: 100rpx; */
+  display: flex;
+  /* flex-direction: row; */
+  font-size: 24rpx;
+  color: #fff;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/*  */
+.musicInfo {
+  /* outline: 1px solid green; */
+  width: 60%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.rollCon {
+  /* outline: 1px solid red; */
+  /* position: relative; */
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 60rpx;
+  /* z-index: 100; */
+  /* background: #fde8c7; */
+  font-size: 20rpx;
+  /* line-height: 60rpx; */
+}
+
+.song-box {
+  /* outline: 1px solid green; */
+  width: 100%;
+  position: relative;
+}
+
+.txt-mName {
+  /* outline: 1px solid blue; */
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.txt-mAuthor {
+  white-space: nowrap;
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.btn-box{
+  /* outline: 1px solid red; */
+  width: 40%;
+  display: flex;
+  height: 80rpx;
+  /* position: relative; */
+}
+.btn-volum{
+  /* outline: 1px solid green; */
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 165rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-volum{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.btn-play {
+  /* outline: 1px solid red; */
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-play {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.btn-like {
+  /* outline: 1px solid blue; */
+  position: absolute;
+  right: -5rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.img-like {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 播放进度条区 */
+.playing-status {
+  display: flex;
+  color: #fff;
+  margin-top: 20rpx;
+  /* margin: 20rpx 0; */
+}
+
+.progress {
+  /* width: 100%;
+  border-radius: 4px;
+  color: #000;
+  margin-bottom: 20rpx; */
+  width: 540rpx;
+  margin: 0 auto;
+  color: #000;
+  position: relative;
+  border-radius: 50rpx;
+}
+
+.time {
+  width: 70rpx;
+  text-align: center;
+  display: block;
+  font-size: 24rpx;
+}
+
+/*播放器页*/
+
+.box {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+#playingpage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.blurbg {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
+  background-repeat: no-repeat;
+  transform: scale(1.2);
+}
+
+.gifbg {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+#playingpage .playing-wrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+#playingpage .playing-wrap .contents {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nowPlayingTitle {
+  margin-top: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.nowPlayingArtist {
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+#playing-main {
+  /* animation-delay: 0.5s;
+  animation: circle 25s linear infinite;
+  animation-play-state: paused;
+  padding: 30rpx 0; */
+}
+
+#pmaincover {
+  width: 100%;
+  height: 100%;
+  left: 104rpx;
+  top: 104rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.playing #playing-main {
+  /* animation-play-state: running !important; */
+}
+
+.playing #playing-zz image {
+  transform: rotate(-0deg);
+}
+
+/*  */
+
+#playingpage .playing-wrap .actions {
+  /* padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  height: 400rpx;
+  overflow: hidden;
+  /* width: 100%; */
+  width: calc(100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weui-grids {
+  /* outline: 1px solid red; */
+  overflow: hidden;
+  width: 100%;
+  /* margin-top: 50rpx; */
+}
+
+.loading-box{
+  /* outline: 1px solid blue; */
+  width: 100%;
+  height: 420rpx;
+  /* height: 210px; */
+}
+
+.btn-area {
+  /* border: 1px solid #e9e9e9; */  
+  background-color: rgba(255, 255, 255, 0.05);
+  /* background-color: #7284ea; */
+  width: 200rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); */
+}
+
+.btn-txt {
+  color: #fff;
+  font-size: 30rpx;
+}
+
+#cd-box {
+  /* outline: 1px solid blue; */
+  position: relative;
+  /* padding: 20rpx 0; */
+  padding: 2vh 0;
+  /* top: -20vh; *//* top: -120px; *//* margin-top: 80px; */
+}
+
+.level_1 {
+  /* outline: 1px solid green; */
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 0 auto;
+  position: relative;
+  /* top: 150rpx; */
+  top: 0;
+  border-radius: 50%;
+  /* 去掉此属性解决轻微直边问题 */
+  padding: 1rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  width: 520rpx;
+  height: 520rpx;
+  animation: mymove 25s linear infinite;
+  animation-delay: 1s;
+  animation-play-state: paused;
+}
+
+.playing .level_1 {
+  animation-delay: 1s;
+  animation-play-state: running !important;
+}
+
+@keyframes mymove {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cd {
+  width: 100%;
+  height: 100%;
+  /* position: fixed; */
+  position: relative;
+  z-index: 2;
+}
+
+.cover {
+  width: 96%;
+  height: 96%;
+  /* width: 100%;
+  height: 100%; */
+  border-radius: 100%;
+  /* position: fixed; */
+  position: absolute;
+  z-index: 3;
+  padding-top: 0;
+}
+
+/* 感受区 */
+.weui-grids {
+  /* outline: 1px solid purple; */
+  overflow: hidden;
+  width: 100%;
+}
+
+.weui-grid {
+  /* border: 1px solid red; */
+  position: relative;
+  float: left;
+  /* padding: 10px; */
+  padding: 2vh 20rpx;
+  width: 33.33333333%;
+  box-sizing: border-box;
+  height: 33.333333%;
+}
+
+.btn-area {
+  /* border: 1px solid #e9e9e9; */  
+  background-color: rgba(255, 255, 255, 0.05);
+  /* background-color: #7284ea; */
+  width: 200rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05); */
+  padding: 0;
+}
+
+.btn-txt {
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.modal-content {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  z-index: 9500;
+  width: 600rpx;
+  height: 45%;
+  overflow: hidden;
+  /* padding: 120rpx 0; */
+  /* background: #fff; */
+  margin: 0rpx -300rpx;
+  border-radius: 20rpx;
+}
+.modal-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.modal-txt{
+  position: absolute;
+  z-index: 2;
+  top: 120rpx;
+  left: 250rpx;
+}
+.modal-txt-intr{
+  position: absolute;
+  z-index: 2;
+  top: 200rpx;
+  left: 50rpx;
+}
+.modal-button{
+  background-color: rgb(34, 196, 34);
+  border-radius: 20rpx;
+  position: absolute;
+  top: 75%;
+  left: 70%;
+  z-index: 9500;
+  padding: 20rpx;
+  color: #fff;
+>>>>>>> renew
+>>>>>>> 2019/12/9
+}

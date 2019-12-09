@@ -1,0 +1,121 @@
+/* components/navbar/yyhome.wxss */
+
+/* components/navbar/wdyy.wxss */
+
+/* 组件中不会自动引用公共样式，如果需要则需在样式文件中引入 */
+
+/* @import "../../app.wxss"; */
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back:before {
+  content: "\e637";
+}
+
+.icon-info:after {
+  content: "\e643";
+}
+
+/* 顶部要固定定位   标题要居中   自定义按钮和标题要和右边微信原生的胶囊上下对齐 */
+
+.nav-wrap {
+  position: fixed;
+  width: 100%;
+  height: 32px;
+  /* padding: 15rpx 0; *//* padding: 55rpx 0 15rpx 0; */
+  top: 0;
+  background-color: #bb2c08;
+  z-index: 18;
+}
+
+/* 标题要居中 */
+
+.nav-title {
+  position: absolute;
+  text-align: center;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 36rpx;
+  color: #2c2b2b;
+  font-weight: 600;
+}
+
+.nav-capsule {
+  /* outline: 1px solid green; */
+  display: flex;
+  align-items: center;
+  /* margin-left: 30rpx; */
+  width: 550rpx;
+  /* justify-content: space-between; */
+  height: 32px;
+}
+
+.navbar-v-line {
+  width: 1px;
+  height: 32rpx;
+  background-color: #e5e5e5;
+}
+
+.back-box {
+  /* outline: 1px solid red; */
+  width: 64rpx;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 28;
+}
+
+.back-box .iconfont {
+  font-size: 38rpx;
+  color: #fff;
+}
+
+.title-box {
+  /* outline: 1px solid red; */
+  width: 100%;
+  height: 32px;
+  position: fixed;
+  display: flex;
+  color: #ccc;
+}
+.title-box .active{
+  color: #fff;
+  font-weight: bolder;
+  font-size: 38rpx;
+}
+
+.title-yy {
+  /* outline: 1px solid green; */
+  width: 100rpx;
+  height: 32px;
+  position: fixed;
+  right: 55%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.title-my {
+  /* outline: 1px solid blue; */
+  width: 100rpx;
+  height: 32px;
+  position: fixed;
+  left: 55%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}

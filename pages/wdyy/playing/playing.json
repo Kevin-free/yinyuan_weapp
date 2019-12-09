@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/navbar/wdyy"
+  },
+  "navigationStyle": "custom"
+}

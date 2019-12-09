@@ -1,0 +1,28 @@
+/**index.wxss**/
+.cont{
+  display: flex;
+  justify-content: center;
+}
+
+image{
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+.btn-login{
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50rpx;
+  width: 350rpx;
+  height: 80rpx;
+  position: absolute;
+  bottom: 85rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-txt{
+  font-family: "仿宋";
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "nav-bar": "/components/navbar/titlebar"
+  },
+  "navigationBarBackgroundColor": "#2BA9E9",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "寻找音缘",
+  "navigationStyle": "custom"
+}

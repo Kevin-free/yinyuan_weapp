@@ -1,0 +1,549 @@
+<<<<<<< HEAD
+/* pages/phb/phb.wxss */
+
+page {
+  height: 0;
+}
+
+.con {
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  color: #fff;
+}
+
+.top-box {
+  /* outline: 1px solid green; */
+  height: 40%;
+  width: 100%;
+  display: flex;
+}
+
+.top-item {
+  /* outline: 1px solid blue; */
+  height: 100%;
+  width: 33.33%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.top2-box {
+  /* outline: 1px solid purple; */
+  width: 140rpx;
+  height: 330rpx;
+  position: absolute;
+  top: 100rpx;
+  /* left: 50%;
+  margin-left: -75rpx; */
+  display: flex;
+  justify-content: center;
+}
+
+.top1-box {
+  /* outline: 1px solid purple; */
+  width: 170rpx;
+  height: 360rpx;
+  position: absolute;
+  /* top: 60rpx; */
+  /* left: 50%;
+  margin-left: -85rpx; */
+  display: flex;
+  justify-content: center;
+}
+.top-txt-box{
+  border: 2rpx solid yellow;
+  background-color: gold;
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  z-index: 3;
+  left: -20rpx;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.top-txt-box >text{
+  font-size: 30rpx;
+}
+
+.top2-ava {
+  border: 3px solid #65da8e;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* margin-left: -75rpx; *//* margin: 0 auto; */
+}
+
+.top3-ava {
+  border: 3px solid #78c0fc;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* margin-left: -75rpx; *//* margin: 0 auto; */
+}
+
+.top1-ava {
+  border: 3px solid #fe61aa;
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* margin-left: -75rpx; *//* margin: 0 auto; */
+}
+
+.hz2 {
+  width: 124rpx;
+  height: 144rpx;
+  position: absolute;
+  top: 115rpx;
+}
+
+.hz1 {
+  width: 140rpx;
+  height: 164rpx;
+  position: absolute;
+  top: 135rpx;
+}
+
+.ava-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.nickname {
+  position: absolute;
+  /* top: 265rpx; */
+  bottom: 50rpx;
+  text-align: center;
+}
+
+.top-zyyzs {
+  position: absolute;
+  color: #f1e172;
+  bottom: 135rpx;
+  font-size: 30rpx;
+}
+.yinfubox{
+  /* outline: 1px solid red; */
+  position: absolute;
+  bottom: 100rpx;
+}
+.icon-yinfu{
+  color: #f1e172;
+  font-size: 30rpx;
+}
+.src-box{
+  /* outline: 1px solid red; */
+  height: 60%;
+  
+}
+.top-list {
+  /* outline: 1px solid green; */
+  height: 100%;
+}
+
+.list {
+  margin: 20rpx 20rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  position: relative;
+}
+
+.list-ava {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+.list-yinfu{
+  position: absolute;
+  right: 80rpx;
+  margin-top: 3rpx;
+}
+.zyyzs {
+  position: absolute;
+  right: 20rpx;
+  color: #f1e172;
+  font-size: 30rpx;
+}
+=======
+<<<<<<< HEAD
+/* pages/phb/phb.wxss */
+
+page {
+  height: 0;
+}
+
+.con {
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  color: #fff;
+}
+
+.top-box {
+  /* outline: 1px solid green; */
+  height: 40%;
+  width: 100%;
+  display: flex;
+}
+
+.top-item {
+  /* outline: 1px solid blue; */
+  height: 100%;
+  width: 33.33%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.top2-box {
+  /* outline: 1px solid purple; */
+  width: 140rpx;
+  height: 330rpx;
+  position: absolute;
+  top: 100rpx;
+  /* left: 50%;
+  margin-left: -75rpx; */
+  display: flex;
+  justify-content: center;
+}
+
+.top1-box {
+  /* outline: 1px solid purple; */
+  width: 170rpx;
+  height: 360rpx;
+  position: absolute;
+  /* top: 60rpx; */
+  /* left: 50%;
+  margin-left: -85rpx; */
+  display: flex;
+  justify-content: center;
+}
+.top-txt-box{
+  border: 2rpx solid yellow;
+  background-color: gold;
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  z-index: 3;
+  left: -20rpx;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.top-txt-box >text{
+  font-size: 30rpx;
+}
+
+.top2-ava {
+  border: 3px solid #65da8e;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* margin-left: -75rpx; *//* margin: 0 auto; */
+}
+
+.top3-ava {
+  border: 3px solid #78c0fc;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* margin-left: -75rpx; *//* margin: 0 auto; */
+}
+
+.top1-ava {
+  border: 3px solid #fe61aa;
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* margin-left: -75rpx; *//* margin: 0 auto; */
+}
+
+.hz2 {
+  width: 124rpx;
+  height: 144rpx;
+  position: absolute;
+  top: 115rpx;
+}
+
+.hz1 {
+  width: 140rpx;
+  height: 164rpx;
+  position: absolute;
+  top: 135rpx;
+}
+
+.ava-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.nickname {
+  position: absolute;
+  /* top: 265rpx; */
+  bottom: 50rpx;
+  text-align: center;
+}
+
+.top-zyyzs {
+  position: absolute;
+  color: #f1e172;
+  bottom: 135rpx;
+  font-size: 30rpx;
+}
+.yinfubox{
+  /* outline: 1px solid red; */
+  position: absolute;
+  bottom: 100rpx;
+}
+.icon-yinfu{
+  color: #f1e172;
+  font-size: 30rpx;
+}
+.src-box{
+  /* outline: 1px solid red; */
+  height: 60%;
+  
+}
+.top-list {
+  /* outline: 1px solid green; */
+  height: 100%;
+}
+
+.list {
+  margin: 20rpx 20rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  position: relative;
+}
+
+.list-ava {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+.list-yinfu{
+  position: absolute;
+  right: 80rpx;
+  margin-top: 3rpx;
+}
+.zyyzs {
+  position: absolute;
+  right: 20rpx;
+  color: #f1e172;
+  font-size: 30rpx;
+}
+=======
+/* pages/phb/phb.wxss */
+
+page {
+  height: 0;
+}
+
+.con {
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  color: #fff;
+}
+
+.top-box {
+  /* outline: 1px solid green; */
+  height: 40%;
+  width: 100%;
+  display: flex;
+}
+
+.top-item {
+  /* outline: 1px solid blue; */
+  height: 100%;
+  width: 33.33%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.top2-box {
+  /* outline: 1px solid purple; */
+  width: 140rpx;
+  height: 330rpx;
+  position: absolute;
+  top: 100rpx;
+  /* left: 50%;
+  margin-left: -75rpx; */
+  display: flex;
+  justify-content: center;
+}
+
+.top1-box {
+  /* outline: 1px solid purple; */
+  width: 170rpx;
+  height: 360rpx;
+  position: absolute;
+  /* top: 60rpx; */
+  /* left: 50%;
+  margin-left: -85rpx; */
+  display: flex;
+  justify-content: center;
+}
+.top-txt-box{
+  border: 2rpx solid yellow;
+  background-color: gold;
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  z-index: 3;
+  left: -20rpx;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+.top-txt-box >text{
+  font-size: 30rpx;
+}
+
+.top2-ava {
+  border: 3px solid #65da8e;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* margin-left: -75rpx; *//* margin: 0 auto; */
+}
+
+.top3-ava {
+  border: 3px solid #78c0fc;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* margin-left: -75rpx; *//* margin: 0 auto; */
+}
+
+.top1-ava {
+  border: 3px solid #fe61aa;
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  /* margin-left: -75rpx; *//* margin: 0 auto; */
+}
+
+.hz2 {
+  width: 124rpx;
+  height: 144rpx;
+  position: absolute;
+  top: 115rpx;
+}
+
+.hz1 {
+  width: 140rpx;
+  height: 164rpx;
+  position: absolute;
+  top: 135rpx;
+}
+
+.ava-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.nickname {
+  position: absolute;
+  /* top: 265rpx; */
+  bottom: 50rpx;
+  text-align: center;
+}
+
+.top-zyyzs {
+  position: absolute;
+  color: #f1e172;
+  bottom: 135rpx;
+  font-size: 30rpx;
+}
+.yinfubox{
+  /* outline: 1px solid red; */
+  position: absolute;
+  bottom: 100rpx;
+}
+.icon-yinfu{
+  color: #f1e172;
+  font-size: 30rpx;
+}
+.src-box{
+  /* outline: 1px solid red; */
+  height: 60%;
+  
+}
+.top-list {
+  /* outline: 1px solid green; */
+  height: 100%;
+}
+
+.list {
+  margin: 20rpx 20rpx;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  position: relative;
+}
+
+.list-ava {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 0 20rpx;
+}
+.list-yinfu{
+  position: absolute;
+  right: 80rpx;
+  margin-top: 3rpx;
+}
+.zyyzs {
+  position: absolute;
+  right: 20rpx;
+  color: #f1e172;
+  font-size: 30rpx;
+}
+>>>>>>> renew
+>>>>>>> 2019/12/9

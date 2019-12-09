@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/wdyy/fm/index",
+    "pages/wdyy/home/index",
+    "pages/zjyy/zjyy",
+    "pages/phb/phb",
+    "pages/xzyy/result/index",
+    "pages/xzyy/xzyy",
+    "pages/xzyy/share/share",
+    "pages/xzyy/ckpp/ckpp",
+    "pages/home/home",
+    "pages/wdyy/login/index",
+    "pages/wdyy/playing/playing",
+    "pages/wdyy/playing/index",
+    "pages/home/water",
+    "pages/wdyy/wdyy",
+    "pages/wdyy/playlist/index",
+    "pages/wdyy/artist/index",
+    "pages/wdyy/recsongs/index",
+    "pages/wdyy/search/index",
+    "pages/wdyy/recommend/index",
+    "pages/wdyy/new/index",
+    "pages/wdyy/mv/index",
+    "pages/wdyy/program/index",
+    "pages/wdyy/user/index",
+    "pages/wdyy/simi/index",
+    "pages/wdyy/album/index",
+    "components/navbar/titlebar",
+    "components/navbar/wdyy",
+    "components/navbar/yyhome",
+    "pages/wdyy/me/index",
+    "pages/wdyy/record/index"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#BB2C08",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 15000,
+    "downloadFile": 15000
+  },
+  "sitemapLocation": "sitemap.json"
+}
